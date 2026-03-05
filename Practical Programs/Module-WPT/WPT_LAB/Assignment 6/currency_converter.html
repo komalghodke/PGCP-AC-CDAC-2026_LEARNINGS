@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> Currency Converter </title>
+        <style>
+        input, select, button {
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+        </style>
+    </head>
+    <body>
+
+        <strong> Currency Converter </strong> <br>
+        <label for = "a1"> Enter Amount: <input type="number" id="a1"/>
+        <br>
+        Convert From <select id="from"> 
+            <option value="Rupee"> Rupee </option>
+            <option value="Dollar"> Dollar </option>
+            <option value="Euro"> Euro </option>
+        </select>
+        Convert To <select id="to"> 
+            <option value="Rupee"> Rupee </option>
+            <option value="Dollar"> Dollar </option>
+            <option value="Euro"> Euro </option>
+        </select>
+
+        <button id="convert" onclick="convert()"> Convert </button>
+        <p id="out"> </p>
+</div>
+
+    <script type="text/javascript"> 
+        function convert() {
+            //let amt = parseFloat(document.getElementById("a1").value);
+            let amt = document.getElementById("a1").value;
+            let f = document.getElementById("from").value;
+            let t = document.getElementById("to").value;
+            //alert(t);
+            let rate = {'Rupee':1 , 'Dollar':80, 'Euro':90};
+            let symbols = {Rupee: " /-", Dollar: "$ ", Euro : " "};
+            let inRupees = amt * rate[f];
+            let res = inRupees / rate[t];
+            document.getElementById("out").innerText = amt + " " + f + " = "+ res + symbols[t] +  " "+ t;
+        }
+    </script> 
+</body>
+</html>

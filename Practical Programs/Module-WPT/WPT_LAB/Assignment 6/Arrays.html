@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head><title>Array Operations</title></head>
+<body>
+  <input id="val" placeholder="value">
+  <input id="idx" type="number" placeholder="index">
+  <button onclick="chk()">Check</button>
+  <button onclick="add()">Add</button>
+  <button onclick="ins()">Insert</button>
+  <button onclick="rem()">Remove</button>
+  <p id="res"></p>
+  <p id="arr"></p>
+
+<script>        
+    let arr=["apple","banana","cherry"];
+    show();
+
+    function show() {
+        arrEl().innerText=arr.join(", ");
+    }
+    function arrEl() {
+        return document.getElementById("arr");
+    }
+
+    function chk() {
+    let v=val(); 
+    document.getElementById("res").innerText=arr.includes(v)?"Found":"Not Found";
+    }
+
+    function add() {
+        let v=val(); if(v) arr.push(v); show();
+    }
+
+    function ins() {
+        let v=val(),i=idx(); if(v!==""&&!isNaN(i)) arr.splice(i,0,v); show();
+    }
+
+    function rem() {
+        let i=idx(); if(!isNaN(i)) arr.splice(i,1); show();
+    }
+
+    function val() {
+        return document.getElementById("val").value;
+    }
+
+    function idx() {
+        return parseInt(document.getElementById("idx").value);
+    }
+</script>
+</body>
+</html>
