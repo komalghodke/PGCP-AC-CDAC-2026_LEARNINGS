@@ -1,0 +1,62 @@
+<html>
+    <body> 
+        <input id="t"><button onclick="a()">Add</button>
+        <button onclick="d()"> Display </button>
+        <ul id="u"> </ul>
+
+        <input id="txt" placeholder="Type here">
+        <br>
+        <label> <input type="radio" name="opt" value="upper" onclick="show()"> UpperCase</label>
+        <label> <input type="radio" name="opt" value="lower" onclick="show()"> LowerCase</label>
+        <label> <input type="radio" name="opt" value="asis"  onclick="show()"> As-It-Is</label>
+        <p id="out"></p>
+
+    </body>
+    <script>
+
+    function f1() {        
+        console.log("declaration");
+        return "declaration";
+    }
+    const f2= function() {
+        console.log("expression");
+        return "expression";
+    }
+    
+    const f3=()=> "arrow"; (function() {
+        console.log("IIFE");
+    })();
+
+    f1();
+    f2();
+
+    function sayHello(name = 'Guest') {
+    console.log("Hello " + name); }
+    sayHello();
+    sayHello("Komal");
+
+    function square(n) {
+        return (n * n);
+    }
+    let ans = square(3); 
+    console.log(ans);
+
+    let arr=[];
+    function a() {
+        arr.push(t.value);
+        alert("added " + t.value);
+        t.value="";
+    }
+    function d() {
+        u.innerHTML = arr.map(x=> "<li>" + x + "</li>").join("");
+    }
+
+    function show(){
+    let v=document.getElementById("txt").value;
+    let o=document.querySelector('input[name="opt"]:checked').value;
+    document.getElementById("out").innerText=
+        o=="upper" ? v.toUpperCase() : o=="lower" ? v.toLowerCase():v;
+    }
+
+    </script>
+</html>

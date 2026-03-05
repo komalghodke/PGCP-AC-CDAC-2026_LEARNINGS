@@ -1,0 +1,17 @@
+
+1) Explore different type of functions which discussed in lecture 
+
+2) take 1 text field and 2 buttons add and display 
+    on click on add button add the contents of textfield in array 
+	on click on Display button display array data on html page 
+		in UL list format
+		
+3) do email validation code 
+
+4) understand varargs parameter
+
+5) take one textfield and 3 radio buttons 
+        UpperCase      LowerCase    asitis 
+		
+	after entering data on selection of radio button display 
+	reuired output in p tag on same page 
