@@ -1,0 +1,79 @@
+<html>
+    <title> JS Assignment</title>
+<body>
+<pre>
+   JavaScript Assignment 
+
+1) understand the difference between let and var 
+
+2) Declare 1 variable which contain numeric data 
+   and display   table of that number in console 
+    (use function)
+	
+3) Write a code to display o/p as following 
+   * * *
+   * *
+   *
+   
+4) Accept input from user using textfield
+    use HTML5 validator to specify number format input
+	on Button Click 
+	Display Sqaure on that number on webpage 
+</pre>
+
+    <input type="number" id="num" placeholder="Enter a Number">
+    <button onclick="printTable()"> Print Table </button>
+    <div id="output"></div>
+    
+    <h3>Enter a number:</h3>
+    <input type="number" id="numInput" required>
+    <button onclick="displaySquare()">Calculate Square</button>
+    <p id="result"></p>
+
+</body>
+
+<script type="text/javascript">
+function test() {
+  if (true) {
+    var x = 10;
+    let y = 20;
+    console.log("Value of x is: " + x); 
+    console.log("Value of y is: " + y); 
+  }
+    console.log("Value of x is: " + x); 
+  //console.log("Value of y is: " + y); //Error, Block Scoped
+}
+test();
+
+function printTable() {
+    let num = document.getElementById("num").value;
+    let result = "";
+    console.log("Table of: " + num + " is: ");
+    for(let i=1; i<=10; i++) {
+        result += num + " x " + i + " = " + (num*i) + "<br>";
+        console.log(num*i);
+    }
+    document.getElementById("output").innerHTML = result;
+}
+
+function printPattern() {
+  let rows = 3;
+  for (let i = rows; i >= 1; i--) {
+    let str = "";
+    for (let j = 1; j <= i; j++) {
+      str += "* ";
+    }
+    console.log(str.trim());
+  }
+}
+printPattern();
+
+function displaySquare() {
+    let num = document.getElementById("numInput").value;
+    if (num) {
+    document.getElementById("result").innerText = `Square of ${num} is ${num * num}`;
+    console.log("Square of " + num + " is: " + num*num);
+}
+}
+</script>
+</html>
