@@ -1,0 +1,50 @@
+
+Create 4 Html Pages as mentioned Below 
+
+1) Create Login.html 
+
+	Username
+	Password
+	Login Button 
+
+2) NewUser.html
+     FirstName
+     LastName
+     UserName
+     Gender
+     KnownLanguages   English/Marathi/Hindi
+     email id 
+     Password
+     Re-enter Password
+	Register Button 
+
+3) ChangePassword.html
+	
+	Username
+	New Password
+                 Re-Enter Password 
+	  Change Password Button 
+
+4) AboutUs.html
+      Preapre Your Resume 
+           Education Details  -  Use Table Tags 
+           Hobbies    -  UnOrdered List 
+           Project Description -  Description List 
+
+   And Use other tags as per requirment 
+
+5) create index.html -  
+	show 4 hyperlinks 
+	NewUser  --- NewUser.html
+	Login -- Login.html
+	ChangePassword -- ChangePassword.html
+	AboutUs  -- AboutUs.html    
+
+         
+         
+
+
+
+
+	
+    

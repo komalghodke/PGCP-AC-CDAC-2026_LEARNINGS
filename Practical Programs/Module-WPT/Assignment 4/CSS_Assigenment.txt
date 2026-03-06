@@ -1,0 +1,18 @@
+
+1. Write an HTML that has a div tag having an essay copied from net
+ add font family , font size, font style , font weight , text decoration overline
+ font color background color using INLINE CSS
+ 
+ 2. Write an HTML using internal CSS that has 3 Text Input Fields
+All should shown in one line
+Set the left and right margins to appropriate space
+Set the border to solid blue
+Set border size properly
+Below this show an image , show a rounded border in red color to image
+
+Adjust the top margin of image to have proper distance from texfields
+
+
+3) in Day1 assignment add iframe tag inside index.html 
+and open the hyperlink in iframe 
+

@@ -1,0 +1,18 @@
+JavaScript Assignment 
+
+1) understand the difference between let and var 
+
+2) Declare 1 variable which contain numeric data 
+   and display   table of that number in console 
+    (use function)
+	
+3) Write a code to display o/p as following 
+   * * *
+   * *
+   *
+   
+4) Accept input from user using textfield
+    use HTML5 validator to specify number format input
+	on Button Click 
+	Display Sqaure on that number on webpage 
+	

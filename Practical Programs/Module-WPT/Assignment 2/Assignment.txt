@@ -1,0 +1,20 @@
+
+Use VS Code 
+
+Explore HTML Documentation 
+
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+1) in Day2 Assignments 
+     add fieldset and legend tags 
+    add html5 validators for fields 
+
+2) In AboutUs.html page add file control to upload Resume 
+
+3) with help of iframe tag add you tube video 
+   in web page 
+ use video and audio controls from HTML5 
+
+4) In NewUser.html page button on click of Register 
+    Button display all information on same page
+    in table format 

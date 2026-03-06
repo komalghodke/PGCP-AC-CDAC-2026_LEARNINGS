@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Assignment 1</title>
+    <style>
+        .input-fields {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .input-fields input {
+            margin: 0 10px;
+            border: 3px solid rgba(2, 39, 95, 0.774);
+            padding: 5px;
+        }
+        .styled-image {
+            margin-top: 30px;
+            border: 5px solid rgb(245, 34, 59);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+    </style>
+</head>
+<body>
+    
+<h3> ASSIGNMENT 4 </h3>
+<b> PART 1 </b>
+<p> 1. Write an HTML that has a div tag having an essay copied from net
+ add font family , font size, font style , font weight , text decoration overline
+ font color background color using INLINE CSS </p>
+
+<p style="font-style: italic; font-family: cursive; font-size: medium; font-weight: 250; text-decoration: overline; color: rgb(103, 17, 17); background-color: rgba(255, 182, 193, 0.279);"> Freelance Full-Stack Developer Self-Employed | Jan 2025 – Present <br>
+
+Designed and developed a secure wellness platform using enterprise-grade architecture
+
+Built ReactJS frontend and Spring Boot backend with REST APIs, JWT auth, and MySQL
+
+Engineered a custom admin inbox with SMTP-based automated replies and real-time inquiry tracking
+
+Integrated legal compliance pages and SEO metadata for discoverability.
+</p>
+
+<b> PART 2 </b>
+<p> 2. Write an HTML using internal CSS that has 3 Text Input Fields
+All should shown in one line
+Set the left and right margins to appropriate space
+Set the border to solid blue
+Set border size properly
+Below this show an image , show a rounded border in red color to image
+
+Adjust the top margin of image to have proper distance from texfields
+</p>
+<div class="input-fields">
+        <input  type="text" id="fName"  name="fName" placeholder="First Name">
+        <input type="text" id="mid" name="mid" placeholder="Middle Name">
+        <input type="text" id="lName"  name="lName" placeholder="Last Name">
+</div>
+<img src="https://picsum.photos/200" alt="Sample Image" class="styled-image">
+
+<b> PART 3 </b>
+<p> Add iframe tag inside index.html 
+and open the hyperlink in iframe  </p>
+
+<iframe src="https://www.wikipedia.org" 
+            width="600" 
+            height="400" 
+            style="border:2px solid black;">
+</iframe>
+</body>
+</html>

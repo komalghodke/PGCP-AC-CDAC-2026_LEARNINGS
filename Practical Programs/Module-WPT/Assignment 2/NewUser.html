@@ -1,0 +1,113 @@
+<html>
+<head> <strong> "Welcome!" </strong> <br> </head>
+
+<body bgcolor="SeaShell">
+	<br>
+	<form style="margin: 18px 0;" id="registerForm">
+	<div >
+	<label for="fName"> FirstName </label>
+	<input type="text" id="fName"  name="fName" minlength="2" maxlength="20" required/>
+	<label for="lName"> LastName </label>
+	<input type="text" id="lName"  name="lName" minlength="2" maxlength="20" required/>
+	<label for="uName"> UserName </label>
+	<input type="text" id="uName"  name="uName" minlength="2" maxlength="20" required/>
+	<br>
+	<label> Gender </label>
+		<input type="radio" name="gender"> Male
+			<input type="radio" name="gender" id="female"> <label for="female" checked> Female </label>
+	<pre>
+	<label>Known Languages </label>
+	<input type="checkbox"  name="tech">English
+	<input type="checkbox"  name="tech">Marathi
+	<input type="checkbox"  name="tech">Hindi
+	<input type="checkbox"  name="tech">Sanskrit 
+	</pre>
+	
+	<label for="email" required>Email ID </label>
+	<input type="email" id="email"  name="email" />
+	
+	<label for="pass">Password </label>
+	<input type="password" id="pass"  name="Password" required/>
+	<label for="confirmPassword">Re-Enter Password </label>
+	<input type="password" id="confirmPassword"  name="Password" required/> <br>	
+	<input type="submit" value="Register">
+	<input type="reset" value="Reset">
+</form>
+
+	<h2 style="margin: 18px 0;">Registered User Details</h2>
+
+    <table border="1" id="resultTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Gender</th>
+                <th>Languages</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const form = document.getElementById("registerForm");
+        const table = document.getElementById("resultTable");
+        const tbody = table.querySelector("tbody");
+
+        form.addEventListener("submit", function (event) {
+
+            // stop page reload
+            event.preventDefault();
+
+            // get values
+            const firstName = document.getElementById("fName").value;
+            const lastName = document.getElementById("lName").value;
+            const username = document.getElementById("uName").value;
+            const email = document.getElementById("email").value;
+
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+
+            const password = document.getElementById("pass").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            // password validation
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // get checked languages
+            const languages = [];
+            document.querySelectorAll('input[name="tech"]:checked')
+                .forEach(cb => languages.push(cb.value));
+
+            if (languages.length === 0) {
+                alert("Select at least one language");
+                return;
+            }
+
+            // create table row
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+            <td>${firstName}</td>
+            <td>${lastName}</td>
+            <td>${username}</td>
+            <td>${gender}</td>
+            <td>${languages.join(", ")}</td>
+            <td>${email}</td>
+        `;
+
+            tbody.appendChild(row);
+
+            // show table
+            table.style.display = "table";
+
+            // reset form
+            form.reset();
+        });
+    </script>
+	
+</body> 
+</html>
