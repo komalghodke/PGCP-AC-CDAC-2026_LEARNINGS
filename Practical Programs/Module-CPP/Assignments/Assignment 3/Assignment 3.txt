@@ -1,0 +1,47 @@
+Q.
+Write a program to find the sum of all elements of an array.
+
+Example
+Input: 1 2 3 4 5
+Output: Sum = 15
+
+Q.
+Write a C++ program to find the largest element in an array.
+
+Q.
+Write a C++ program to count even and odd numbers in an array.
+
+Example
+Array: 1 2 3 4 5
+Even = 2
+Odd = 3
+
+Q.
+Write a program to reverse the array elements.
+
+Example
+Input: 1 2 3 4 5
+Output: 5 4 3 2 1
+
+Q.
+Write a function to calculate the sum of two numbers using default arguments.
+
+Example
+
+add(int a=10, int b=20)
+
+Call function with :
+
+add()
+add(50)
+add(10,20)
+
+Q.
+Write overloaded functions to find area of:
+-Square
+-Rectangle
+
+Example
+
+area(int side)
+area(int length, int breadth)
