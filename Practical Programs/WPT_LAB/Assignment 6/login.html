@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Assignment 6</title>
+</head>
+    <script type="text/javascript">
+        function validation() {
+            
+        let data = {
+            "name" : "GK",
+            "id" : 1,
+            "grade" : 'A'
+        };
+        console.log(data);
+
+        let data1 = {
+            "name" : "GK",
+            "id" : 2,
+            "grade" : 'B'
+        };
+        console.log(data1);
+
+        Object.prototype.print = function() {
+            console.log("Prototype");
+        }
+        
+        let b = {
+            "i":100
+        };
+        b.print(b.i,2,3);
+
+        let id = setInterval(call, 1000);
+        let cnt = 0;
+        function call() {
+            console.log("Inside Call() ");
+            cnt++;
+            console.log(cnt);
+            if (cnt == 5) {
+                clearInterval(id);
+            }
+        }
+
+        //let u = document.forms.f1.uName.value;
+        let u = document.forms["f1"]["uName"].value;
+        let pswd = document.forms["f1"]["pass"].value;
+        console.log(u);
+        if(u.trim() == "" || u.length<2 || !isNaN(u)) {
+            alert("Please Enter Valid Name, It should not contain number & It can't be empty or less that 2 character!");
+            return false;
+        } else if(pswd.trim() == "" || pswd.length<8 || p.length>12) {
+            alert("Invalid Password! Length must be between 8 to 12 chars long!");
+            return false;
+        }
+        if(u!="iet" && pswd!="iet") {
+            alert("Invalid, can't proceed to Home Page");
+            return false;
+           }
+           
+        return true;
+        }
+    </script>
+<body>
+    <strong> Login </strong> </br>
+    <form name="f1" action="Home.html" onsubmit="return validation()">
+    <label for="uName"> Username
+    <input type="text" name="uName" id="uName"/>
+    <br>
+    <label for="pass"> Password
+    <input type="password" name="pass" id="pass"/>
+    <br>
+    <input type="submit"> Submit </button>
+    <input type="reset" />
+    </form>
+</body>
+</html>

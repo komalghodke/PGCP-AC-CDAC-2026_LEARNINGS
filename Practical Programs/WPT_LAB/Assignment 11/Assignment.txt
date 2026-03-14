@@ -1,0 +1,43 @@
+Node JS
+1) write a function addition  , multiplication 
+                              division , subtraction which accepted 2 parameters   
+	write result function which accept 3 parameters 
+     
+               result (a1 , a2 , callback)
+
+pass callback parameters while calling 
+
+2) Understande and write nested call back function (as shown in lecture)
+
+3) In assignment 1 code add 
+   result function which accept 2 parameters 
+    result(error , result)
+    and add condition check in divide & multiplication function 
+   if 2nd parameter is zero display error message 
+
+4) understand promise concept and implement
+in your code 
+
+5) write a code which contains 
+   normal function 
+   setTimeout
+   Promise
+   Console.log()
+
+and understand execution sequence 
+
+Extra Assignment 
+
+1)Complete Yesterday's PasswordGenerator code 
+
+2) from html accept 
+    FirstName  textfield
+    LastName  textfield
+    birthDate    <input type="date"/>
+
+	
+  on button click <generate username>
+Generate UserName  as follows and display in P Tag 
+    first 2 characters from firstname 
+    +age+last2characters from lastname 
+

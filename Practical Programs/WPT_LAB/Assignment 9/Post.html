@@ -1,0 +1,88 @@
+<DOCTYPE html>
+
+    <head>
+        <title>Assignment</title>
+        <script src="https://code.jquery.com/jquery-4.0.0.js"
+            integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+        <script>
+            function sendRecords() {
+                var zhttp = new XMLHttpRequest();
+
+                const mParameters = {
+                    title: document.querySelector('#Utitle').value,
+                    userid: document.querySelector('#UId').value,
+                    body: document.querySelector('#Ubody').value
+                }
+
+                zhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 201) {
+                        document.getElementById("example").innerHTML = this.responseText;
+                        console.log("Data Posted Successfully")
+                    }
+                    console.log("Error found")
+                };
+
+                zhttp.open("POST", "https://jsonplaceholder.typicode.com/todos", true);
+
+                zhttp.setRequestHeader('Content-type', 'application/json')
+
+                zhttp.send(JSON.stringify(mParameters));
+            }
+
+
+            $(document).ready(function () {
+                $("#d").load("first.html")
+            })
+
+
+            $(document).ready(function () {
+                $("#gen").click(() => {
+                    let pswd = "";
+                    let pswdData = "abcdefghijklmnopqrstuvwxyz1234569870@_.-";
+                    let length = parseInt($("#pass").val(), 10);
+
+                    for (let i = 0; i < length; i++) {
+                        let pos = Math.floor(Math.random() * pswdData.length);
+                        pswd += pswdData[pos];
+                    }
+
+                    console.log(pswd);
+                    $("#d1").text(pswd);
+                });
+            });
+
+
+        </script>
+
+    </head>
+
+    <body>
+        <h2>Enter your Details: </h2>
+        <label for="Utitle">Title</label>
+        <input id="Utitle" type="text" name="title"><br>
+
+        <label for="UId">UserId</label>
+        <input id="UId" type="number" name="UserID"><br>
+
+        <label for="Ubody">Comments</label>
+        <input id="Ubody" type="text" name="body"><br>
+
+        <button type="button" onclick="sendRecords()">Submit</button>
+        <div id="example"></div>
+
+        <br> <br>
+        <strong> LOADED DATA... </strong>
+        <div id="d">
+        </div>
+
+        <br>
+        <strong> Generate Random Password </strong> <br>
+        <label for="pass">Enter Length for Password</label>
+        <input id="pass" type="number" name="pass">
+        <button id="gen"> Generate</button>
+        <div id="d1"> </div>
+
+    </body>
+
+    </html>

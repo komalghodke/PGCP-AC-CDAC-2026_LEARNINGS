@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+
+<script>
+
+    $(document).ready(function () {
+        $("#gen").click(() => {
+            function addition(a, b) {
+                return a + b;
+            }
+
+            function subtraction(a, b) {
+                return a - b;
+            }
+
+            function multiplication(a, b) {
+                return a * b;
+            }
+
+            function division(a, b) {
+                if (b === 0) {
+                    return "Error: Division by zero";
+                }
+                return a / b;
+            }
+
+            function result(a1, a2, callback) {
+                console.log("Result:", callback(a1, a2));
+            }
+
+
+            result(10, 5, addition);
+            result(10, 5, subtraction);
+            result(10, 5, multiplication);
+            result(10, 5, division);
+
+            alert("Called")
+
+            // $("#d1").text(pswd);
+        });
+    });
+
+
+    $(document).ready(function () {
+        $("#gen1").click(() => {
+
+            function step1(val, callback) {
+                console.log("Step 1:", val);
+                callback(val + 1);
+            }
+
+            function step2(val, callback) {
+                console.log("Step 2:", val);
+                callback(val * 2);
+            }
+
+            function step3(val, callback) {
+                console.log("Step 3:", val);
+                callback(val - 3);
+            }
+
+            step1(5, function (res1) {
+                step2(res1, function (res2) {
+                    step3(res2, function (res3) {
+                        console.log("Final Result:", res3);
+                    });
+                });
+            });
+            // $("#d1").text(pswd);
+            alert("called")
+        });
+    });
+
+    // let p = new Promise((resolve, reject) => {
+    //     let n = 4;
+
+    // })
+
+
+</script>
+
+<body>
+    <p>
+    <pre>
+        1) write a function addition , multiplication, division , subtraction 
+        which accepted 2 parameters, write result function which accept 3 parameters.
+        result (a1 , a2 , callback)
+        pass callback parameters while calling
+
+        <button id="gen"> Click </button>
+    </pre>
+    <pre>
+        2) write nested call back function (as shown in lecture)  
+        <button id="gen1"> Click </button>
+    </pre>
+
+    <pre>
+        4) understand promise concept and implement in your code 
+    </pre>
+    </p>
+
+
+</body>
+
+</html>

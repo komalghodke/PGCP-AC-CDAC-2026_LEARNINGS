@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Assignment 7</title>
+    <strong>Assignment 7</strong>
+  
+    <p> 1) take array of 10 elements, display array as it is and use predefined methods of array and display only even numbers , odd numbers and display whole array in sorted way.
+    <br> 2) create Object 
+        <pre>
+            let b = {
+            id:100,
+            name:"abc"
+            email:"abc@gmail.com"
+        }
+    </pre>display elements of array using for in loop 
+    </p>
+
+    <script>
+        let nums = [12,23,121,231,2,2,4,6,8];
+        let evenNums = [];
+        let oddNums = [];
+        console.log("Input Array is: " + nums);
+        nums.forEach(element => {
+            if(element%2==0) {
+                evenNums.push(element);
+            }
+            else {
+                oddNums.push(element);
+            }
+        });
+        console.log("Even Numbers are: " + evenNums);
+        console.log("Odd Numbers are: " + oddNums);
+        let newEven = nums.filter(n => n%2==0);
+        let newOdd = nums.filter(n => n%2!=0);
+        console.log("Even Numbers - Using filter: " + newEven);
+        console.log("Odd Numbers - Using filter: " + newOdd);
+        
+        let sorted  = [];
+        sorted = nums.sort((n1,n2) => (n1 - n2));
+        console.log("After Sorting: " + sorted);
+
+        let b = {
+            id:100,
+            name:"abc",
+            email:"abc@gmail.com",
+            data: ["data1 ","data2 ",3,4,5]
+        }
+
+        for (const key in b) {
+            if (!Object.hasOwn(b, key)) continue;
+            const element = b[key];
+        console.log("Object Content: " + element);
+        }
+        console.log("Array Data is: ");
+        
+        //forEach(e => console.log(b.data));
+        console.log("id of Object is: " + b.id);
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Ok">
+</body>
+</html>

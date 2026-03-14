@@ -1,0 +1,21 @@
+1)
+Using AJAX concept load data from given url 
+https://fakestoreapi.com/products
+
+and display data in html page in table format 
+
+	id | Title | price
+
+2) In Yesterday animation assignment (last one)
+   add stop button on click of that stop the animation
+
+3)  create HTML page with 1 textfield and button 
+     add predefined validators on textfield 
+     required , minlength , maxlength 
+     on button click display error message in front of textfield 
+
+4) accept student id and student name from user
+   on Button click save data in Object format 
+   and display data in Table format on same html page
+
+5) with calender control accept birthDate from user and display age 

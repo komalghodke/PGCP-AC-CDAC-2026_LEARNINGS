@@ -1,0 +1,34 @@
+JavaScript 
+
+1) take array of 10 elements 
+
+display array as it is 
+
+and use predefined methods of array and display 
+
+only even numbers , odd numbers and display whole array 
+in sorted way 
+
+2)
+create Object 
+let b = {
+	id:100,
+	name:"abc"
+	email:"abc@gmail.com"
+}
+
+display elements of array using for in loop 
+
+
+
+1) Using Jquery write an html that has a button-OK . When button is clicked
+display hello in a <p> tag
+Display italics hello in another <p> tag
+Distplay underline hello in third <p> tag
+
+2) Using Jquery accept a number from the user in a textfield - on change show
+the factorial of that number in a <p> tag
+
+3) take div on your html with width 50 and height 50 px 
+   on start button click  animate that div to left to right and change height and width
+
