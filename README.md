@@ -2,13 +2,13 @@
 
 Theory notes, practical programs, and learning resources from CDAC PGCP-AC
 
-# PGCP-AC Learning Repository
+## PGCP-AC Learning Repository
 
 This repository documents my academic journey during the **Post Graduate Certificate Program in Advanced Computing (PGCP‑AC)**, February 2026 batch.  
 
 It serves as a structured record of concepts, assignments, and projects completed throughout the program.
 
-# Learning Goals
+## Learning Goals
 ```
 - Strengthen theoretical foundations with structured notes  
 - Apply concepts through practical coding and assignments  
