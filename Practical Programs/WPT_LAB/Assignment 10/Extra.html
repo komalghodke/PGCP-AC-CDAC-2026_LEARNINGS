@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password & Username Generator</title>
+</head>
+<body>
+  <h2>Password Generator</h2>
+  <button onclick="generatePassword()">Generate Password</button>
+  <p id="password"></p>
+
+  <hr>
+  <h2>Username Generator</h2>
+  <label>First Name:</label>
+  <input type="text" id="fname"><br><br>
+
+  <label>Last Name:</label>
+  <input type="text" id="lname"><br><br>
+
+  <label>Birth Date:</label>
+  <input type="date" id="bdate"><br><br>
+
+  <button onclick="generateUsername()">Generate Username</button>
+  <p id="output"></p>
+
+  <script>
+    // Password Generator
+    function generatePassword() {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+      let password = "";
+      for (let i = 0; i < 10; i++) {
+        let randomIndex = Math.floor(Math.random() * chars.length);
+        password += chars[randomIndex];
+      }
+      document.getElementById("password").innerText = "Generated Password: " + password;
+    }
+
+    // Username Generator
+    function generateUsername() {
+      let fname = document.getElementById("fname").value;
+      let lname = document.getElementById("lname").value;
+      let bdate = document.getElementById("bdate").value;
+
+      if (!fname || !lname || !bdate) {
+        document.getElementById("output").innerText = "Please fill all fields.";
+        return;
+      }
+
+      let firstTwo = fname.substring(0,2);
+
+      let lastTwo = lname.substring(lname.length-2);
+
+      let birth = new Date(bdate);
+      let today = new Date();
+      let age = today.getFullYear() - birth.getFullYear();
+      let m = today.getMonth() - birth.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+        age--; // adjust if birthday hasn’t occurred yet this year
+      }
+
+      let username = firstTwo + age + lastTwo;
+
+      document.getElementById("output").innerText = "Generated Username: " + username;
+    }
+  </script>
+</body>
+</html>
