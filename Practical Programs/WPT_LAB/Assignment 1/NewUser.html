@@ -60,7 +60,6 @@
             // stop page reload
             event.preventDefault();
 
-            // get values
             const firstName = document.getElementById("fName").value;
             const lastName = document.getElementById("lName").value;
             const username = document.getElementById("uName").value;
@@ -71,13 +70,11 @@
             const password = document.getElementById("pass").value;
             const confirmPassword = document.getElementById("confirmPassword").value;
 
-            // password validation
             if (password !== confirmPassword) {
                 alert("Passwords do not match!");
                 return;
             }
 
-            // get checked languages
             const languages = [];
             document.querySelectorAll('input[name="tech"]:checked')
                 .forEach(cb => languages.push(cb.value));
@@ -87,7 +84,6 @@
                 return;
             }
 
-            // create table row
             const row = document.createElement("tr");
 
             row.innerHTML = `
@@ -101,10 +97,8 @@
 
             tbody.appendChild(row);
 
-            // show table
             table.style.display = "table";
 
-            // reset form
             form.reset();
         });
     </script>

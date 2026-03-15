@@ -1,21 +1,16 @@
 <html>
-
 <body>
-
     <Strong> Assignment </Strong>
-    <p> 1)
-        Using AJAX concept load data from given url
-        https://fakestoreapi.com/products
-
-        and display data in html page in table format
-        id | Title | price</p>
+    <p> <pre>1) Using AJAX concept load data from given url
+    https://fakestoreapi.com/products
+    and display data in html page in table format
+    id | Title | price </pre> </p>
     <button id="b" onclick="loadData()"> LoadData.. </button>
     <b>
         <p id="data"> Response Data: </p>
     </b>
     <table border="1" id="products">
         <thead>
-
             <tr>
                 <th> ID </th>
                 <th> Title </th>
@@ -25,69 +20,53 @@
         <tbody> </tbody>
     </table>
 
-    <br> <br>
-
-
-    <p>
-        2) Create Animation add start and stop button on click to animate
-    </p>
+    <p><pre>2) Create Animation add start and stop button on click to animate </pre></p>
     <b>Animation</b>
     <div id="d" style="position: relative; width: 50px; height: 50px; background-color: rgb(79, 140, 219);"> </div>
     <br>
     <button id="s"> start </button>
     <button id="st"> stop </button>
 
-    <br> <br>
-    <p>
-        3) create HTML page with 1 textfield and button, add predefined validators on textfield required , minlength ,
-        maxlength on button click display error message in front of textfield </p>
+    <br>
+    <p><pre>3) create HTML page with 1 textfield and button, add predefined validators on textfield
+    required , minlength , maxlength on button click display error message in front of textfield
+</pre></p>
 
-    <Label for="in"> Enter EmailId </Label>
-    <input type="text" id="in" required>
+    <form id="myForm">
+      <label for="in"> Enter EmailId </label>
+      <input type="text" id="in" required minlength="3" maxlength="10">
+      <button type="button" onclick="validateField()"> validate </button>
+      <span id="errorMsg" class="error"></span>
+    </form>
+  
+   <p><pre>4) accept student id and student name from user on Button click save data in Object format and display data in Table format on same html page </pre></p>
 
-    <button> validate </button>
+  <h3>Enter Student Details</h3>
+  <form name="f1">
+    Student Id: <input type="text" name="sid" id="sid">
+    Student Name: <input type="text" name="sname" id="sname">
+    <button type="button" onclick="saveData()" style="background-color:lightblue; padding:5px;">Save</button>
+  </form>
 
-</body>
+  <h3>Student Table</h3>
+  <table id="studentTable" style="border:1px solid black; border-collapse:collapse;">
+    <tr>
+      <th style="border:1px solid black; padding:5px;">Student Id</th>
+      <th style="border:1px solid black; padding:5px;">Student Name</th>
+    </tr>
+  </table>
 
-<script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
-    crossorigin="anonymous"></script>
+  <p><pre>5) with calender control accept birthDate from user and display age </pre></p>
+  <b> AGE CALCULATOR </b><br><br>
+  <b>Enter Birth Date</b>
+  <form name="ageForm">
+    <input type="date" id="birthDate" name="birthDate" style="margin:5px;">
+    <button type="button" onclick="calculateAge()" style="margin:5px;">Show Age</button>
+    <p id="result" style="font-weight:bold; color:blue;"></p>  
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-
-    // function loadData() {
-
-    //     console.log("inside loadData");
-    //     let xhttp = new XMLHttpRequest();
-    //     xhttp.open("GET",
-    //         "https://fakestoreapi.com/products");
-    //     xhttp.send();
-    //     xhttp.onreadystatechange = function () {
-    //         if (this.readyState == 4 && this.status == 200) {
-    //             let responseObject = JSON.parse(this.responseText);
-    //             console.log(responseObject)
-    //             //let data = document.getElementById("products").innerText = (d);
-
-    //             const table = document.getElementById("products");
-    //             const tbody = table.querySelector("tbody");
-
-    //             tbody.innerHTML = "";
-
-    //             responseObject.forEach(element => {
-    //                 const row = document.createElement("tr");
-    //                 row.innerHTML = `<td> ${responseObject.id} </td>
-    //                 <td> ${responseObject.title} </td>
-    //                 <td> ${responseObject.price} </td> `;
-
-    //                 tbody.append(row);
-    //             });
-    //             table.style.display = "table";
-    //             // data.forEach(element => {
-    //             //     $("#table tbody").append("<tr><td>" + element.id + "</td><td>"
-    //             //         + element.title + "</td > <td>" + element.price + "</td></tr>")
-    //             // });
-    //         }
-    //     };
-    // }
-
     function loadData() {
         console.log("inside loadData");
         let xhttp = new XMLHttpRequest();
@@ -105,10 +84,10 @@
                 responseObject.forEach(product => {
                     const row = document.createElement("tr");
                     row.innerHTML = `
-                    <td>${product.id}</td>
-                    <td>${product.title}</td>
-                    <td>${product.price}</td>
-                `;
+                      <td>${product.id}</td>
+                      <td>${product.title}</td>
+                      <td>${product.price}</td>
+                    `;
                     tbody.append(row);
                 });
 
@@ -133,6 +112,64 @@
         });
     });
 
+    function validateField() {
+      let input = document.getElementById("in");
+      let errorSpan = document.getElementById("errorMsg");
+
+      errorSpan.textContent = "";
+
+      if (!input.checkValidity()) {
+        errorSpan.textContent = input.validationMessage;
+        errorSpan.style.color = "red";
+      } else {
+        errorSpan.textContent = "Valid input!";
+        errorSpan.style.color = "green";
+      }
+    }
+
+    //4th Part
+    function saveData() {
+      let id = document.forms["f1"]["sid"].value;
+      let name = document.forms["f1"]["sname"].value;
+
+      let student = {
+        StudentId: id,
+        StudentName: name
+      };
+      console.log(student);
+
+      let table = document.getElementById("studentTable");
+      let row = table.insertRow();
+      row.insertCell(0).innerHTML = student.StudentId;
+      row.cells[0].style.border = "1px solid black";
+      row.cells[0].style.padding = "5px";
+
+      row.insertCell(1).innerHTML = student.StudentName;
+      row.cells[1].style.border = "1px solid black";
+      row.cells[1].style.padding = "5px";
+    }
+
+    //LAST PART - AGE CALCULATOR
+    function calculateAge() {
+      let birthInput = document.forms["ageForm"]["birthDate"].value;
+      if (birthInput === "") {
+        document.getElementById("result").innerHTML = "Please select a birth date!";
+        return;
+      }
+
+      let birthDate = new Date(birthInput);
+      let today = new Date();
+
+      let age = today.getFullYear() - birthDate.getFullYear();
+      let monthDiff = today.getMonth() - birthDate.getMonth();
+
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+
+      document.getElementById("result").innerHTML = "Age: " + age + " years";
+    }
 </script>
 
+</body>
 </html>

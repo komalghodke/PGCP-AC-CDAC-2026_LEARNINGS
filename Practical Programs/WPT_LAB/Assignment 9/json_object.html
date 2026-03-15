@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 9</title>
+</head>
+<body>
+    <h3>---------------------------------------------------------------------------
+        <br>YOU ARE ON HOME PAGE!
+    </h3>
+
+    <p id="jsonOutput" style="color:green;"></p>
+    <p id="bookOutput" style="color:blue;"></p>
+    <p><i>(Check console as well for detailed logs)</i></p>
+
+    <script>
+        // Task 1: object with book details and destructuring
+        let books = { bookid: 1, bName: "JAVASCRIPT" };
+
+        let { bookid, bName } = books;
+        console.log("Bookid = " + bookid + " Book Name = " + bName);
+
+        let { bookid: id1, bName: name2 } = books;
+        console.log("Bookid = " + id1 + " Book Name = " + name2);
+
+        document.getElementById("bookOutput").innerHTML =
+            "<b>Book Details:</b> Bookid = " + bookid + ", Book Name = " + bName + "<br>" +
+            "<b>Alternate Destructuring:</b> Bookid = " + id1 + ", Book Name = " + name2;
+
+        // Task 2: variable with object data in string format
+        let data = '{ "marks": 90, "id": 1, "name": "abc" }';
+        let d = JSON.parse(data);
+        console.log(d);
+
+        let newD = JSON.stringify(d); 
+        console.log(newD);
+
+        document.getElementById("jsonOutput").innerHTML =
+            "<b>Parsed Object:</b> marks=" + d.marks + ", id=" + d.id + ", name=" + d.name + "<br>" +
+            "<b>Stringified JSON:</b> " + newD;
+    </script>
+</body>
+</html>

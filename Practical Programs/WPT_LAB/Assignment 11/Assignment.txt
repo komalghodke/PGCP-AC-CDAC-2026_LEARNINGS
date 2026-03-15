@@ -1,43 +1,41 @@
-Node JS
-1) write a function addition  , multiplication 
-                              division , subtraction which accepted 2 parameters   
-	write result function which accept 3 parameters 
-     
-               result (a1 , a2 , callback)
+1) Write a program to understand async and await mechanism 
 
-pass callback parameters while calling 
+2) in Employee.js file 
+   create Employee class 
+    take firstName , lastName , email , designation 
+     basicSalary 
+   input from constructor 
+   
+   in Employee class 
+     write display method which display employee details
+   write setter and getter methods for each variable 
 
-2) Understande and write nested call back function (as shown in lecture)
+create index.js file 
+   in that file import Employee class 
+   create Object of Employee with help of Constructor and display Employee details 
 
-3) In assignment 1 code add 
-   result function which accept 2 parameters 
-    result(error , result)
-    and add condition check in divide & multiplication function 
-   if 2nd parameter is zero display error message 
+3) Write a function calculate to perform addition of numbers  from given string 
+   let d = '12345678as'  in calc.js file 
 
-4) understand promise concept and implement
-in your code 
+and call that calculate function from main.js file 
 
-5) write a code which contains 
-   normal function 
-   setTimeout
-   Promise
-   Console.log()
+4) understand npm init , npm install , 
+npm install express 
 
-and understand execution sequence 
+in package.json file add start parameter in script 
 
-Extra Assignment 
+and check npm start command 
 
-1)Complete Yesterday's PasswordGenerator code 
+5) create file sample.txt add some data in that file 
+   and read that file in synchronus way as well as asynchronus way
 
-2) from html accept 
-    FirstName  textfield
-    LastName  textfield
-    birthDate    <input type="date"/>
+6) create file product.txt and write data in that file 
+  using sync and async methods . 
 
-	
-  on button click <generate username>
-Generate UserName  as follows and display in P Tag 
-    first 2 characters from firstname 
-    +age+last2characters from lastname 
+
+7) create file Employee.txt and append Employee Data in that file by creating Object of Employee 
+
+8) try to use other methods from fs module 
+  for directories 
+   
 

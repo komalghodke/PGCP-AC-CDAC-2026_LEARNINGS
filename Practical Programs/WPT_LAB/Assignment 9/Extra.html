@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment - Password by Length</title>
+</head>
+<body>
+  <h3>Random Password Generator (Length Based)</h3>
+
+  <label for="len">Enter Password Length:</label>
+  <input type="number" id="len" min="1" />
+  <button onclick="generatePassword()">Generate</button>
+
+  <p id="output"></p>
+  <p><i>(Check console as well for detailed logs)</i></p>
+
+  <script>
+    function generatePassword() {
+      let length = parseInt(document.getElementById("len").value);
+
+      let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      let password = "";
+
+      for (let i = 0; i < length; i++) {
+        let randomIndex = Math.floor(Math.random() * chars.length); 
+        password += chars[randomIndex]; 
+      }
+
+      document.getElementById("output").innerHTML = "Generated Password: " + password;
+      console.log("Generated Password: " + password);
+    }
+  </script>
+</body>
+</html>

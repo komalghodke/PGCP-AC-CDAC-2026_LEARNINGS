@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Assignment 7</title>
+    <strong>Assignment 7</strong>
+  
+    <p> 
+      1) take array of 10 elements, display array as it is and use predefined methods of array and display only even numbers , odd numbers and display whole array in sorted way.
+      <br> 
+      2) create Object 
+        <pre>
+            let b = {
+              id:100,
+              name:"abc"
+              email:"abc@gmail.com"
+            }
+        </pre>
+      display elements of array using for in loop 
+    </p>
+</head>
+<body>
+    <input type="button" value="Ok">
+    <hr>
+    <p id="arrayOutput" style="color:green;"></p>
+    <p id="objectOutput" style="color:blue;"></p>
+
+    <p><i>(Note: Check console as well for detailed logs)</i></p>
+    <script>
+        let nums = [12,23,121,231,2,2,4,6,8,10]; 
+        let evenNums = [];
+        let oddNums = [];
+        console.log("Input Array is: " + nums);
+
+        nums.forEach(element => {
+            if(element%2==0) {
+                evenNums.push(element);
+            }
+            else {
+                oddNums.push(element);
+            }
+        });
+        console.log("Even Numbers are: " + evenNums);
+        console.log("Odd Numbers are: " + oddNums);
+
+        let newEven = nums.filter(n => n%2==0);
+        let newOdd = nums.filter(n => n%2!=0);
+        console.log("Even Numbers - Using filter: " + newEven);
+        console.log("Odd Numbers - Using filter: " + newOdd);
+        
+        let sorted  = [];
+        sorted = nums.sort((n1,n2) => (n1 - n2));
+        console.log("After Sorting: " + sorted);
+
+        document.getElementById("arrayOutput").innerHTML =
+          "<b>Input Array:</b> " + nums + "<br>" +
+          "<b>Even Numbers:</b> " + evenNums + "<br>" +
+          "<b>Odd Numbers:</b> " + oddNums + "<br>" +
+          "<b>Sorted Array:</b> " + sorted + "<br>";
+
+        let b = {
+            id:100,
+            name:"abc",
+            email:"abc@gmail.com",
+            data: ["data1 ","data2 ",3,4,5]
+        }
+
+        let objText = "";
+        for (const key in b) {
+            if (!Object.hasOwn(b, key)) continue;
+            const element = b[key];
+            console.log("Object Content: " + element);
+            objText += key + " : " + element + "<br>";
+        }
+        console.log("Array Data is: ");
+        
+        let dataText = "";
+        b.data.forEach(e => {
+          console.log("Array element: " + e);
+          dataText += e + " ";
+        });
+
+        console.log("id of Object is: " + b.id);
+
+        document.getElementById("objectOutput").innerHTML =
+          "<b>Object Elements:</b><br>" + objText +
+          "<b>Array inside Object:</b> " + dataText + "<br>" +
+          "<b>Id of Object:</b> " + b.id;
+    </script>
+</body>
+</html>

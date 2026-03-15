@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 11 - Callbacks & Promises</title>
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+<body>
+  <pre>
+1) Functions addition, subtraction, multiplication, division with callback
+   result(a1, a2, callback)
+   <button id="gen">Click</button>
+
+2) Nested callback function
+   <button id="gen1">Click</button>
+
+3) Error handling with result(error, result) in divide & multiply
+   <button id="gen2">Click</button>
+
+4) Promise concept
+   <button id="gen3">Click</button>
+
+5) Execution sequence demo (normal fn, setTimeout, Promise, console.log)
+   <button id="gen4">Click</button>
+  </pre>
+
+  <p><i>(Check console as well for detailed logs)</i></p>
+
+<script>
+$(document).ready(function(){
+
+  // 1) Basic arithmetic with callback
+  $("#gen").click(() => {
+    function addition(a,b){ return a+b; }
+    function subtraction(a,b){ return a-b; }
+    function multiplication(a,b){ return a*b; }
+    function division(a,b){ return b===0 ? "Error: Division by zero" : a/b; }
+
+    function result(a1,a2,callback){
+      console.log("Result:", callback(a1,a2));
+    }
+
+    result(10,5,addition);
+    result(10,5,subtraction);
+    result(10,5,multiplication);
+    result(10,5,division);
+    alert("Arithmetic functions executed");
+  });
+
+  // 2) Nested callbacks
+  $("#gen1").click(() => {
+    function step1(val,cb){ console.log("Step1:",val); cb(val+1); }
+    function step2(val,cb){ console.log("Step2:",val); cb(val*2); }
+    function step3(val,cb){ console.log("Step3:",val); cb(val-3); }
+
+    step1(5,function(r1){
+      step2(r1,function(r2){
+        step3(r2,function(r3){
+          console.log("Final Result:",r3);
+        });
+      });
+    });
+    alert("Nested callbacks executed");
+  });
+
+  // 3) Error handling with result(error,result)
+  $("#gen2").click(() => {
+    function multiplication(a,b,cb){
+      if(b===0){ cb("Error: multiplication by zero",null); }
+      else { cb(null,a*b); }
+    }
+    function division(a,b,cb){
+      if(b===0){ cb("Error: division by zero",null); }
+      else { cb(null,a/b); }
+    }
+
+    function result(a,b,operation){
+      operation(a,b,(err,res)=>{
+        if(err) console.log("Error:",err);
+        else console.log("Result:",res);
+      });
+    }
+
+    result(10,0,multiplication);
+    result(10,0,division);
+    result(10,5,multiplication);
+    result(10,5,division);
+    alert("Error handling executed");
+  });
+
+  // 4) Promise concept
+  $("#gen3").click(() => {
+    let p = new Promise((resolve,reject)=>{
+      let n=4;
+      if(n>0) resolve("Number is positive");
+      else reject("Number is not positive");
+    });
+
+    p.then(msg=>console.log("Promise resolved:",msg))
+     .catch(err=>console.log("Promise rejected:",err));
+    alert("Promise executed");
+  });
+
+  // 5) Execution sequence demo
+  $("#gen4").click(() => {
+    console.log("Start");
+
+    setTimeout(()=>console.log("Inside setTimeout"),0);
+
+    let promise = new Promise(resolve=>resolve("Inside Promise"));
+    promise.then(msg=>console.log(msg));
+
+    console.log("End");
+    alert("Execution sequence demo executed");
+  });
+
+});
+</script>
+</body>
+</html>

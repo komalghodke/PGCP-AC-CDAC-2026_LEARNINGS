@@ -1,45 +1,43 @@
-JavaScript
-1) create 1 object which contains Book details 
-  and display data using by destructing that object 
+Node JS
+1) write a function addition  , multiplication 
+                              division , subtraction which accepted 2 parameters   
+	write result function which accept 3 parameters 
+     
+               result (a1 , a2 , callback)
 
-2)  declare 1 variable which contains data for 
-    Object format convert that data in json format
-    and again in Object Format 
+pass callback parameters while calling 
 
-3) https://jsonplaceholder.typicode.com/todos
-using above api create post mehod in ajax concept -- accept data from user for post 
---------------------------------
-JQuery
-1)  create application for $().load()
-   display content of another html page in current page 
+2) Understande and write nested call back function (as shown in lecture)
 
+3) In assignment 1 code add 
+   result function which accept 2 parameters 
+    result(error , result)
+    and add condition check in divide & multiplication function 
+   if 2nd parameter is zero display error message 
 
---------------------------------------------
+4) understand promise concept and implement
+in your code 
 
-Node.js 
+5) write a code which contains 
+   normal function 
+   setTimeout
+   Promise
+   Console.log()
 
-make sure node environment activated on command prompt 
-
-1) execute command on node terminal 
-using REPL Concept 
-and save your session data in sample.js 
-
-2)Write a Node program that prints all the numbers between 1 and 100, each on a separateline. 
-A few caveats:
-o if the number is divisible by 3, print "foo" o if the number is divisible by 5, print "bar" o if the number is divisible by both 3 and 5, print "foobar"
-
---------------------------------------------------------
+and understand execution sequence 
 
 Extra Assignment 
-using html & javascript 
 
-hint Math class and String methods 
+1)Complete Yesterday's PasswordGenerator code 
 
-1) accept length from user and generate random password on javascript and display 
+2) from html accept 
+    FirstName  textfield
+    LastName  textfield
+    birthDate    <input type="date"/>
 
-
-
-
-
-
+	
+  on button click <generate username>
+Generate UserName  as follows and display in P Tag 
+    first 2 characters from firstname 
+    +age+last2characters from lastname 
 
