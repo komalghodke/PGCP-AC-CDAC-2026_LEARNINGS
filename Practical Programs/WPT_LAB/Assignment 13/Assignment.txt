@@ -1,0 +1,23 @@
+explore the programs which is demonstrate in lecture
+
+1) using express js create rest api for product 
+which contains product details 
+
+"prodid":1,"ProductName":"Laird","price":2000
+
+create product.json file which contains at least 5 product 
+
+then create multiple route
+
+GET  / ------------ display all products 
+GET /:id ---------- display prodcut with id 
+POST  /add ---------------  add product using param
+POST /insert ------------  add product using body data 
+DELETE /:id  -------------- Delete particular product 
+
+2) 
+with help of view engine 
+ GET / ---------- render index.html page 
+ 
+ on index page accept number from user and display that number is perfect or not on same page 
+
