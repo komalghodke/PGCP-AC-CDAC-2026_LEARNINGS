@@ -1,0 +1,27 @@
+[
+    {
+        "prodid": 1,
+        "ProductName": "Laird",
+        "price": 2000
+    },
+    {
+        "prodid": 2,
+        "ProductName": "Dell Laptop",
+        "price": 55000
+    },
+    {
+        "prodid": 3,
+        "ProductName": "iPhone",
+        "price": 80000
+    },
+    {
+        "prodid": 4,
+        "ProductName": "Samsung TV",
+        "price": 45000
+    },
+    {
+        "prodid": 5,
+        "ProductName": "Nike Shoes",
+        "price": 7000
+    }
+]

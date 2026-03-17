@@ -1,0 +1,22 @@
+1) accept command line args in node js 
+   and display addition of even numbers from that 
+
+2) create folder axiosProject 
+     execute command 
+
+     npm install axios 
+
+after install that module 
+
+fetch api data using axios.get() method
+
+3)  
+ by using http module create server and run on port numer  - 5050 
+
+  create api  /
+	   /index   --- > display <index page> on browser 
+                    /home --- > display <Home Page> on browser 
+
+	/aboutus --> display <About US> using post method 
+
+hint  - use postman for post method 
