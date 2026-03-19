@@ -1,0 +1,20 @@
+Understand concepts of 
+
+Class Component , state , LifeCycle
+bind 
+
+1) With the concept of Class Component
+   Create Counter Application 
+
+Take 2 buttons Increment and Decrement 
+
+2) Create LoginForm using class component 
+    accept username and password 
+    and display
+	 hello <username>  on same page 
+
+	if username = "iet" and password = "iet"
+3) Write a code to understand lifecycle of class component 
+
+4) Accept TO DO tasks in text field and display 
+   tasks in Ordered List on same page on buttonclick
