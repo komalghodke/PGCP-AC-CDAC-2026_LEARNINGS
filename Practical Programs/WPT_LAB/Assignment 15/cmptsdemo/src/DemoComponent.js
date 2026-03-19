@@ -1,10 +1,10 @@
 import { Component } from "react";
 
-class Login extends Component{
+class Demo extends Component{
 
     constructor() {
         super(); //component Instance
-        //this.msg = "Default Message"; //Login instance
+        //this.msg = "Default Message"; //Demo instance
         this.state = {msg: "default"}
 
         this.btnHandler = this.btnHandler.bind(this);
@@ -25,12 +25,13 @@ class Login extends Component{
 
     render() {
         return <>
+        <h2>Assignment</h2>
         <b> Class Component Demo </b> <br/>
         Username: <input type="text" name="nm" id="name" onBlur={this.txtHandler}/> <br/>
-        <button value={"Login"} onClick={this.btnHandler}> Login </button>
+        <button value={"Demo"} onClick={this.btnHandler}> Click </button>
         <p> Data: {this.state.msg}</p>
         </>
 } 
 
 }
-export default Login;
+export default Demo;

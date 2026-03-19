@@ -25,7 +25,8 @@ class Counter extends Component {
 
     render() {
         return <>
-        <h1>Counter Application</h1>
+        <pre> Q. 1) With the concept of Class Component Create Counter Application, Take 2 buttons Increment and Decrement </pre>
+        <h2>Counter Application</h2>
         <b><p>Counter Value : {this.state.cnt} </p></b>
         <button value={"Inc"} onClick={this.incHandler}> Increment </button> <br/>
         <button value={"Dec"} onClick={this.decHandler}> Decrement </button>
