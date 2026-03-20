@@ -1,0 +1,23 @@
+
+
+Understand Hooks concept 
+
+1) Create Counter Application with Function Component 
+
+2) Declare variable which contains array Data 
+
+let data  = ['C' , 'C++' , 'Java' , 'AdvJava' , 'WPT']
+
+display above variable data in Dropdown format 
+ on html page 
+
+3) Create ParentComponent 
+   which accept data 2 numbers  and it will display result 
+Create ChildComponent which display options in DropDown Format 
+ add , subtraction , Division , Multiplication 
+after Option Selection onChange display result 
+on ParentComponent
+
+4)with help of useEffect understand LifeCycle of Function Component 
+
+5) Read the given file shopstock.json and display data in table format on page when you click on LoadDataButton 

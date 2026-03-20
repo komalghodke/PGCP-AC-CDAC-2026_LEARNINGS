@@ -3,10 +3,10 @@ import { Component } from "react";
 class TodoApp extends Component {
 
     constructor(props) {
-        super(props); // component instance
+        super(props);
         this.state = {
-            task: "",     // current input
-            tasks: []     // list of tasks
+            task: "",
+            tasks: []
         };
         this.txtHandler = this.txtHandler.bind(this);
         this.btnHandler = this.btnHandler.bind(this);
@@ -15,16 +15,25 @@ class TodoApp extends Component {
     txtHandler(e) {
         console.log("Target name: " + e.target.name);
         console.log("Task Value: " + e.target.value);
-        this.setState({ task: e.target.value }); // update current task
+        this.setState({ task: e.target.value });
     }
 
     btnHandler() {
         console.log("Inside btnHandler!");
-        // add current task to tasks array
-        this.setState(prevState => ({
-            tasks: [...prevState.tasks, prevState.task],
-            task: "" // clear input after adding
-        }));
+        if (this.state.task.trim() !== "") {
+            this.setState(prevState => ({
+                tasks: prevState.tasks.concat(prevState.task),
+                task: ""
+            }));
+        }
+    }
+
+    getListItems() {
+        let items = [];
+        for (let i = 0; i < this.state.tasks.length; i++) {
+            items.push(<li key={i}>{this.state.tasks[i]}</li>);
+        }
+        return items;
     }
 
     render() {
@@ -36,9 +45,7 @@ class TodoApp extends Component {
                     Task <input type="text" name="task" id="task" value={this.state.task} onChange={this.txtHandler}/> <br/>
                     <button onClick={this.btnHandler}> Add Task </button>
                     <ol>
-                        {this.state.tasks.map((t, index) => (
-                            <li key={index}>{t}</li>
-                        ))}
+                        {this.getListItems()}
                     </ol>
                 </b>
             </>
