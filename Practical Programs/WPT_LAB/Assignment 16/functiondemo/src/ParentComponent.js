@@ -1,50 +1,25 @@
-import { Component } from "react";
+import { useState } from "react";
+import ChildComponent from "./ChildComponent";
 
-class ChildComponent extends Component {
-
-    constructor(props) {
-        super(props);
+export default function ParentComponent()
+{
+    let [n1,setN1] =useState(0)
+    let [n2,setN2] =useState(0)
+    let [res,setRe] = useState(0)
+    
+    function changeResult(v)
+    {
+        setRe(v)
     }
 
-    render() {
-        return <> 
-        Select Operation:
-        <select>
-            <option> --CHOOSE--</option>
-            <option> ADD </option>
-            <option> SUBSTRAC </option>
-            <option> DIVIDE </option>
-            <option> MULTIPY </option>
-        </select>
-        </>
-    }
-}
-
-class ParentComponent extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {num1: "", num2: "", result: ""};
-    }
-
-    txtHandler(e) {
-        this.setState({ [e.target.name]: e.target.value });
-    }
-
-    render() {
-        return (
-        <>
-         <pre> 3) Create ParentComponent which accept data 2 numbers and it will display result Create ChildComponent <br/> which display options in DropDown Format add , subtraction , Division , Multiplication after Option Selection onChange display result on ParentComponent </pre>
-        <b>
-        <br/>
-        Num1: <input type="text" name="num1" onChange={this.txtHandler}/> <br/>
-        Num2: <input type="text" name="num2"  onChange={this.txtHandler}/> <br/>
-        <ChildComponent />
-        <p>Result: {}</p>
-        </b>
-        </>
-        )
-    }
+    return <div className="outline">
+        <pre> 3) Create ParentComponent which accept data 2 numbers and it will display result Create ChildComponent <br/> which display options in DropDown Format add , subtraction , Division , Multiplication <br/> after Option Selection onChange display result on ParentComponent </pre>
+        <pre>Number 1: <input type="number" onBlur={(e)=>{ setN1(e.target.value)}}  />
+        <br></br>
+        Number 2 :<input type="number" onBlur={(e)=>{ setN2(e.target.value)}}/>
+        </pre>
+        <ChildComponent f1={changeResult} num1={parseInt(n1)} num2={parseInt(n2)}></ChildComponent>
+        <b><p>Result = {res}</p></b>
+    </div>
 
 }
-export default ParentComponent;
