@@ -1,0 +1,8 @@
+[
+    {"id":"11A","item_name":"pen", "unit_cost":20},
+    {"id":"12C","item_name":"pen2", "unit_cost":30},
+    {"id":"13D","item_name":"pencil", "unit_cost":10},
+    {"id":"14F","item_name":"eraser", "unit_cost":15},
+    {"id":"15R","item_name":"marker", "unit_cost":50},
+    {"id":"16T","item_name":"ruler", "unit_cost":25}
+]

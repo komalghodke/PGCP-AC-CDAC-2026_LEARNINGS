@@ -34,7 +34,7 @@ class ParentComponent extends Component {
     render() {
         return (
         <>
-         <pre> 3) Create ParentComponent which accept data 2 numbers and it will display result Create ChildComponent <br/> which display options in DropDown Format add , subtraction , Division , Multiplication after Option Selection onChange display result on ParentComponent </pre>
+         <pre> Q. 3) Create ParentComponent which accept data 2 numbers and it will display result Create ChildComponent <br/> which display options in DropDown Format add , subtraction , Division , Multiplication after Option Selection onChange display result on ParentComponent </pre>
         <b>
         <br/>
         Num1: <input type="text" name="num1" onChange={this.txtHandler}/> <br/>

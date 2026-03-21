@@ -14,8 +14,8 @@ export default function CounterF() {
     }
 
     return <>
-    <h2>Demo - Function Component </h2>
-    <pre> 1) Create Counter Application with Function Component </pre>
+    <pre> Q. 1) Create Counter Application with Function Component </pre>
+    <b>Demo - Function Component </b>
     <b>Counter Value: {cnt}</b> <br/>
     <button id="btn" onClick={inc}>INCREMENT</button> <br/>
     <button id="dec" onClick={dec}>DECREMET</button>

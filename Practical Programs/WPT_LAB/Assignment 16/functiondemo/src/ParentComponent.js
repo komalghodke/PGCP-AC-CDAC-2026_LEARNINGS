@@ -13,7 +13,7 @@ export default function ParentComponent()
     }
 
     return <div className="outline">
-        <pre> 3) Create ParentComponent which accept data 2 numbers and it will display result Create ChildComponent <br/> which display options in DropDown Format add , subtraction , Division , Multiplication <br/> after Option Selection onChange display result on ParentComponent </pre>
+        <pre> Q. 3) Create ParentComponent which accept data 2 numbers and it will display result Create ChildComponent <br/> which display options in DropDown Format add , subtraction , Division , Multiplication <br/> after Option Selection onChange display result on ParentComponent </pre>
         <pre>Number 1: <input type="number" onBlur={(e)=>{ setN1(e.target.value)}}  />
         <br></br>
         Number 2 :<input type="number" onBlur={(e)=>{ setN2(e.target.value)}}/>

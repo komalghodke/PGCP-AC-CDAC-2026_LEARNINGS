@@ -12,7 +12,7 @@ export default function DropDown() {
     return <>
     <br/>
     <br/>
-    <pre> 2) Declare variable which contains array Data <br/>
+    <pre> Q. 2) Declare variable which contains array Data <br/>
         let data  = ['C' , 'C++' , 'Java' , 'AdvJava' , 'WPT'] <br/>
         display above variable data in Dropdown format on html page </pre>
     {/* <b>DATA: {cnt}</b> <br/> */}
