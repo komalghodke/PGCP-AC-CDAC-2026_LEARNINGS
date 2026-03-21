@@ -1,0 +1,13 @@
+1) create RandomPassword Generator Function
+Component
+use useState , useEffect and useCallBack Hooks 
+ as discussed in Lecture 
+
+2) Read Data From API using fetch method 
+   https://fakestoreapi.com/products
+
+and display data in Table Format 
+When page is loaded 
+
+use array.map method
+
