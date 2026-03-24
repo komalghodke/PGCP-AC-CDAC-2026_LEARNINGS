@@ -1,0 +1,39 @@
+Do programs for below concepts as show in Letcure 
+
+1) useContext 
+2) Controlled Component 
+    UnControlled Component
+
+Assign 1 :
+      Create Login Functional Component 
+      accept username and password 
+
+      username == iet and password == iet 
+
+	display HomePage  created inside yesterday Route Concept 
+ 
+and display Hello <UserName>   on every page 
+of Route Aboutus , ContactUS 
+
+Create 1 Route name Info 
+
+on that page display data from API using axios concept 
+
+  Api  :   https://fakestoreapi.com/products
+
+
+Assign 2 :
+
+    Create Functional Component Counter 
+    which having increament and decrement button 
+   on button click call particulae function 
+
+  for memory optimization use 
+   useCallBack with empty depedancies 
+
+useCallback(
+            () => setCnt(cnt + 1),
+            []);
+
+
+  
