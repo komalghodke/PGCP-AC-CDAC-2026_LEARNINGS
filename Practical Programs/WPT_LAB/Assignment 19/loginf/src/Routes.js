@@ -5,6 +5,7 @@ import Home from "./Home";
 import AboutUs from "./AboutUs";
 import Contact from "./Contacts";
 import Info from "./Info";
+import Counter from "./Counter";
 
 export const ctx = createContext();
 
@@ -27,7 +28,8 @@ export default function Index() {
           <NavLink to="/home">Home</NavLink> |{" "}
           <NavLink to="/about">About Us</NavLink> |{" "}
           <NavLink to="/contact">Contact</NavLink> |{" "}
-          <NavLink to="/info">Info</NavLink>
+          <NavLink to="/info">Info</NavLink> |{" "}
+          <NavLink to="/counter"> Counter Assignment </NavLink>
         </nav>
 
         <Routes>
@@ -36,6 +38,7 @@ export default function Index() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/info" element={<Info />} />
+          <Route path="/counter" element={<Counter/>}/>
         </Routes>
       </BrowserRouter>
     </ctx.Provider>
