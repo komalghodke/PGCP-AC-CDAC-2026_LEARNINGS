@@ -4,9 +4,8 @@ import Routes from "./Routes";
 function App() {
   return (
     <div className="App">
-      return < Routes/>
+      < Routes/>
     </div>
   );
 }
-
 export default App;
