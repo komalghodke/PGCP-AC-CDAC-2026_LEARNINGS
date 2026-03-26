@@ -1,11 +1,11 @@
 import './App.css';
-import Routes from "./Routes";
 
 function App() {
   return (
     <div className="App">
-      < Routes/>
+      <h3> REDUX DEMO </h3>
     </div>
   );
 }
+
 export default App;
