@@ -1,5 +1,8 @@
 package com.javapractice.Entities;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Vehicle {
 	private static int count;
 	static {
@@ -9,6 +12,7 @@ public class Vehicle {
 	private String vid;
 	private String vname, vehicleType, color;
 	String dummy = "test";
+	private Date mfd;
 
 	private String generateVid(String stringvname) {
 		count++;
@@ -20,13 +24,15 @@ public class Vehicle {
 		vehicleType = "dummy";
 		color = "dummy";
 		vid = generateVid("vname");
+		mfd = null;
 	}
 
-	public Vehicle(String vnm, String vtype, String clr) {
+	public Vehicle(String vnm, String vtype, String clr, Date mfd) {
 		vname = vnm;
 		vehicleType = vtype;
 		color = clr;
 		vid = generateVid(vname);
+		this.mfd = new Date();
 	}
 	
 	public String getVname() {
@@ -54,8 +60,18 @@ public class Vehicle {
 		this.color = color;
 	}
 	
+	public Date getMfd() {
+		return mfd;
+	}
+
+	public void setMfd(Date mfd) {
+		this.mfd = mfd;
+	}
+	
 	public String toString() {
-		return "Vehicle ID: " + vid + "\nVehicle Name: " + vname +"\nVehicle Type: " + vehicleType + "\nVehicle Color: " + color;
+		SimpleDateFormat sdate = new SimpleDateFormat("dd/mm/yyyy");
+		String d = sdate.format(mfd);
+		return "Vehicle ID: " + vid + "\nVehicle Name: "+ vname +"\nManufactured Date: "+ d+"\nVehicle Type: " + vehicleType + "\nVehicle Color: " + color;
 		
 	}
 }
