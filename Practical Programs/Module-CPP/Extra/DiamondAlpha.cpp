@@ -19,12 +19,12 @@ int main() {
         if (i % 2 != 0) {
             // odd row → numbers
             for (int j = 1; j <= i; j++) {
-                cout << num++ << "   ";
+                cout << num++<< "   ";
             }
         } else {
             // even row → letters
             for (int j = 1; j <= i; j++) {
-                cout << c++ << "   ";
+                cout << c++<<"   " ;
             }
         }
         cout << endl;
