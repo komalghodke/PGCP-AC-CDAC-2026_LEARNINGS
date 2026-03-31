@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <center>
+  <h3>Login Form</h3>
+  <input id="user" placeholder="Username"> <br/>
+  <input id="pass" type="password" placeholder="Password"> </br>
+  <button onclick="login()">Login</button>
+  <p id="msg"></p>
+  </center>
+
+  <script>
+    function login() {
+      let u = document.getElementById("user").value;
+      let p = document.getElementById("pass").value;
+      let msg = document.getElementById("msg");
+
+      if ((u==="iet" && p==="123") || 
+          (u==="cdac" && p==="456") || 
+          (u==="software" && p==="789")) {
+        msg.style.color="green";
+        msg.innerHTML="Welcome " + u;
+      } else {
+        msg.style.color="red";
+        msg.innerHTML="Error: Invalid details";
+      }
+      document.getElementById("user").value="";
+      document.getElementById("pass").value="";
+    }
+  </script>
+</body>
+</html>

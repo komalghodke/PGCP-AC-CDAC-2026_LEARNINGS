@@ -1,0 +1,6 @@
+10 Marks 
+Q1. Using HTML and Javascript – Write an html that shows a Login Form having Username and Password Textfields. When a [Login] button is clicked check if the details are matching any of the following User = iet password=123 User = cdac password=456 User = software password=789 If matching input is present show Welcome message in a <p> tag and clear the textfields, If matching input is not present show Error message in Red color in the <p> tag and clear the textfields 10 Marks 
+
+Q2. Write a node example1.js file          Create a json object that has rollnumber, name, and marks properties. Create a copy of the above object in a variable obj_copy using a spread operator. Change the marks in first object Print the details of both objects. You should find that marks of first object and obj_copy are different. Write a node example2.js file that prints today’s date 
+
+Q3. Write a react functional component - It shows a textfield and a button  20 MarksWhen an item is added to the textfield and the button is clicked the item should be added in an ordered list in a <div> tag  If user adds Eraser in texfield and clicks button Then show as follows in the div– 1. Eraser If user adds Pen in textfield and clicks button Then show as follows in the div – 1. 2. Eraser Pen User may go on adding more items
