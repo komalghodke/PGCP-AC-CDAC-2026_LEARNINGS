@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>Practice</title>
+</head>
+<body bgcolor="Lavender">
+    <div style="margin: 30px; border-style: dotted;">
+    <center><h1> HELLO, Just Started!</h1> </center>
+    <p>Inside Div 1</p>
+    <strong> Upload your File here! </strong>
+    <input type="file">
+    </div>
+    <fieldset style="margin: 20px;">
+        <legend> Just A Block</legend>
+        <section>
+        <p> Nice to have you here! </p>
+        <hr>
+        <p><strong>Part I</strong></p>
+        Just a part of part 1
+        </section>
+        <section>
+            <hr>
+            <legend>
+                TABLE DATA
+            </legend>
+            <table border="2">
+                <tr>
+                    <th>Col_1 </th>
+                    <th>Col_2 </th>
+                    <th>Col_3 </th>
+                </tr>
+                <tr>
+                    <td> R0 C0 </td>
+                    <td> R0 C1 </td>
+                    <td> R0 C2 </td>
+                </tr>
+                <tr>
+                    <td> R1 C0 </td>
+                    <td> R1 C1 </td>
+                    <td> R1 C2 </td>
+                </tr>
+                <tr>
+                    <td> R2 C0 </td>
+                    <td> R2 C1 </td>
+                    <td> R2 C2 </td>
+                </tr>
+                <tr>
+                    <td> R3 C0 </td>
+                    <td> R3 C1 </td>
+                    <td> R3 C2 </td>
+                </tr>
+            </table>
+        </section>
+    </fieldset>
+        <form id = "form1">
+            <div>
+                <label for="i" > Enter text! </label><input type="text" id="i" maxlength="20" minlength="3" required/>
+                <label for="i1"> Enter a Number! </label><input type="number" id="i1"  maxlength="20" minlength="3" required/>
+                <br/>
+                <label for="fName"> UserName </label>
+                <input type="text" id="fName" name="fName" minlength="2" maxlength="20" required />
+                <label for="pass">Password </label>
+                <input type="Password" id="pass" name="pass" minlength="2" maxlength="20" required/>
+                <label for="email" >Email ID </label>
+                <input type="email" id="email"  name="email" required/>
+                <input type="submit" value="submit"/>
+                <input type="reset" value="reset"/>              
+            </div>
+
+            <ul> UnOrdered List
+                <li>Item One</li>
+                <li>Item Two</li>
+                <li>Item Three</li>
+                <li> Demo Hyperlink <a href="second.html"> Click Here </a></li>
+            </ul>
+
+            <ol> Ordered List
+                <li> First Item</li>
+                <li> Second Item</li>
+                <li> Third Item</li>
+            </ol>
+
+            <label for="m"> Male</label><input type="radio" name="gender" id="m" value="Male"/>            
+            <label for="f"> Female</label><input type="radio" name="gender" id="f" value="Female" checked/>
+
+            <pre>
+            <label> Known Languages</label>
+            <input type="checkbox" name="items" value="one"/> Item One
+            <input type="checkbox" name="items" value="two"/> Item Two
+            <input type="checkbox" name="items" value="three"/> Item Three
+            </pre>
+        </form>
+
+        <table border="2" id="displayT">
+            <thead> Display Tabel
+                <tr>
+                    <th> Column 1</th>
+                    <th> Column 2</th>
+                    <th> Column 3</th>
+                    <th> Column 4</th>
+                </tr>               
+            </thead>
+            <tbody></tbody>
+        </table>
+</body>
+<script> 
+    const form = document.getElementById("form1");
+    const table = document.getElementById("displayT");
+    const tbody = table.querySelector("tbody");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // for stopping page reload
+
+        const fName = document.getElementById("fName").value;
+        const text = document.getElementById("i").value;
+        const text1 = document.getElementById("i1").value;
+        const email = document.getElementById("email").value;
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${fName}</td>
+        <td>${text}</td>
+        <td>${text1}</td>
+        <td>${email}</td>`;
+
+        tbody.appendChild(row);
+        table.style.display = "table";
+    });
+</script>
+</html>

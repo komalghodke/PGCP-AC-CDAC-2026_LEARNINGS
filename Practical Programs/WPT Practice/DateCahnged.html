@@ -1,0 +1,33 @@
+/*
+<pre>
+Q1. HTML Date Field:
+- Show a date textfield
+- On change, display selected date
+- Also show today's date
+</pre>
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Example</title>
+</head>
+<body>
+  <h2>Select a Date</h2>
+  <input type="date" id="myDate" onchange="showDate()">
+  <p id="selected"></p>
+  <p id="today"></p>
+
+  <script>
+    // show today's date
+    document.getElementById("today").innerText =
+      "Today is: " + new Date().toDateString();
+
+    function showDate() {
+      let d = document.getElementById("myDate").value;
+      document.getElementById("selected").innerText =
+        "You selected: " + d;
+    }
+  </script>
+</body>
+</html>

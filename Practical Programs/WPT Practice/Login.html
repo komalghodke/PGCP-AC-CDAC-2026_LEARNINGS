@@ -1,0 +1,47 @@
+/*
+<pre>
+Q1. Using HTML and Javascript – Write an html that shows a Login Form having Username and Password Textfields.
+When a [Login] button is clicked check if the details are matching any of the following:
+User = iet password=123
+User = cdac password=456
+User = software password=789
+
+If matching input is present show Welcome message in a <p> tag and clear the textfields,
+If not present show Error message in Red color in the <p> tag and clear the textfields.
+</pre>
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <input type="text" id="user" placeholder="Username">
+  <input type="password" id="pass" placeholder="Password">
+  <button onclick="checkLogin()">Login</button>
+  <p id="msg"></p>
+
+  <script>
+    function checkLogin() {
+      let u = document.getElementById("user").value;
+      let p = document.getElementById("pass").value;
+      let msg = document.getElementById("msg");
+
+      if ((u === "iet" && p === "123") ||
+          (u === "cdac" && p === "456") ||
+          (u === "software" && p === "789")) {
+        msg.style.color = "green";
+        msg.innerText = "Welcome " + u;
+      } else {
+        msg.style.color = "red";
+        msg.innerText = "Error: Invalid login!";
+      }
+
+      document.getElementById("user").value = "";
+      document.getElementById("pass").value = "";
+    }
+  </script>
+</body>
+</html>
