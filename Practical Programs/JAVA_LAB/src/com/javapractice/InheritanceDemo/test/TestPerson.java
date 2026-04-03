@@ -1,4 +1,4 @@
-package com.javapractice.InheritanceDemo;
+package com.javapractice.InheritanceDemo.test;
 
 import com.javapractice.InheritanceDemo.Entity.ContractEmp;
 import com.javapractice.InheritanceDemo.Entity.SalariedEmp;
@@ -17,5 +17,4 @@ public class TestPerson {
 		System.out.println(ce.calculateSal() + "\n");
 		System.out.println(v + "\n");
 	}
-
 }
