@@ -3,6 +3,8 @@ package com.javapractice.InheritanceDemo.DrawShape;
 public class DrawShapeTest {
 	public static void main(String[] args) {
 
+		DrawShape p = null;
+		//UPCASTING
 		DrawShape s = new Triangle("blue", 2, 3, 4, 5);
 		System.out.println("Area : " + s.calcArea());
 		System.out.println("perimeter: " + s.calcPerimeter());
@@ -16,6 +18,13 @@ public class DrawShapeTest {
 		DrawShape t = new Rectangle("black", 9, 2);
 		System.out.println("Area : " + t.calcArea());
 		System.out.println("perimeter: " + t.calcPerimeter());
-
+		
+		System.out.println("----To chack if Obj is instance of Circle---");
+		System.out.println(c instanceof Circle);
+		
+		//DOWNCASTING - EXPLICIT
+		System.out.println("DOWNCASTIED - EXPLICIT");
+		((Circle) c).childSpecific();
+		
 	}
 }

@@ -34,7 +34,10 @@ public class Circle extends DrawShape {
 		return 2 * 3.142f * r;
 	}
 	
-
+	public void childSpecific() {
+		System.out.println("in circle childSpecific method");
+	}
+	
 	@Override
 	public String toString() {
 		return super.toString() + "Circle [r=" + r + "]";
