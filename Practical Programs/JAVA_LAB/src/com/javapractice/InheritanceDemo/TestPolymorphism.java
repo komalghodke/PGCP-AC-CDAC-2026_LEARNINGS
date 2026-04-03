@@ -1,4 +1,4 @@
-package com.javapractice.InheritanceDemo.test;
+package com.javapractice.InheritanceDemo;
 
 import java.util.Scanner;
 
