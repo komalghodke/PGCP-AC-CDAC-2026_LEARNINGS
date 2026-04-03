@@ -58,5 +58,6 @@ public class Calculate {
 		System.out.println("Enter a number to print it's Table:");
 		int t = sc.nextInt();
 		getTable(t);
+		sc.close();
 	}
 }
