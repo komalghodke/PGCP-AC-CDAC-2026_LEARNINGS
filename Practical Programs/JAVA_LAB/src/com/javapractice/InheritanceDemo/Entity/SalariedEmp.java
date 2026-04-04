@@ -2,26 +2,26 @@ package com.javapractice.InheritanceDemo.Entity;
 
 public class SalariedEmp extends Employee {
 
-	private int sal;
+	private double sal;
 	private double bonus;
 
 	public SalariedEmp() {
 		System.out.println("From SalariedEmp Default Constructor...\n");
 	}
 
-	public SalariedEmp(int id, String nm, String mob, String dept, String desg, int sal) {
+	public SalariedEmp(int id, String nm, String mob, String dept, String desg, double sal) {
 		super(id, nm, mob, dept, desg);
 		this.sal = sal;
 		this.bonus = sal * 0.10;
 		System.out.println("From SalariedEmp Parameterized Constructor!\n");
 	}
 
-	public int getSal() {
+	public double getSal() {
 		return sal;
 	}
 
-	public void setSal(int sal) {
-		this.sal = sal;
+	public void setSal(double sal2) {
+		this.sal = sal2;
 	}
 
 	public double getBonus() {
