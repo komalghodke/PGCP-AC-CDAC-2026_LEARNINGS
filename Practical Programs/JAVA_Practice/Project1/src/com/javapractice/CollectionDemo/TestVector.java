@@ -25,5 +25,4 @@ public class TestVector {
 		System.out.println("size : " + ((Vector<Integer>) v).size());
 		System.out.println(v);
 	}
-
 }
