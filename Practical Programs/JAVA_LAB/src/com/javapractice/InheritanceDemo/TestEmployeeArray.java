@@ -13,9 +13,9 @@ public class TestEmployeeArray {
 		Scanner sc = new Scanner(System.in);
 
 		do {
-			System.out.println("1.add new employee \n 2. delete employee\n 3. search employee by id\n"
-					+ "4. update employee salary \n 5. display All\n 6. display by name\n 7. calculate net salary\n "
-					+ "8. exit\n choice: ");
+			System.out.println("1.Add new employee \n 2. Delete employee by id\n 3. Search employee by id\n"
+					+ "4. Update employee salary \n 5. Display All\n 6. Display by name\n 7. Calculate net salary\n "
+					+ "8. Exit\n Enter your Choice: ");
 
 			choice = sc.nextInt();
 			switch (choice) {
