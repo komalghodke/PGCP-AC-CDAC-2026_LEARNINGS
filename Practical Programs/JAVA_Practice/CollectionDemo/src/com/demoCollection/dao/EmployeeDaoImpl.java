@@ -1,6 +1,7 @@
 package com.demoCollection.dao;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -51,33 +52,48 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public List<Employee> findByName(String nm) {
 		// java 1.7
-		/*
-		 * List<Employee> lst=new ArrayList<>(); Iterator<Employee> it=elist.iterator();
-		 * while(it.hasNext()) { Employee e=it.next(); if(e.getPname().equals(nm)) {
-		 * lst.add(e); } }
-		 */
+
+//		List<Employee> lst=new ArrayList<>();
+//		Iterator<Employee> it=elist.iterator();
+//		while(it.hasNext()) { 
+//			Employee e=it.next();
+//			if(e.getPname().equals(nm))
+//			{
+//				lst.add(e);
+//			}
+//		}
+
 		// java 1.7
-		/*
-		 * List<Employee> lst=new ArrayList<>(); for(Employee e: elist) {
-		 * if(e.getPname().equals(nm)) { ast.add(e); } }
-		 */
+//		List<Employee> lst = new ArrayList<>();
+//		for (Employee e : elist) {
+//			if (e.getPname().equals(nm)) {
+//				lst.add(e);
+//			}
+//		}
 
 		// java 1.8 using stream function
-		List<Employee> lst = elist.stream().
-				filter(e -> e.getPname().equalsIgnoreCase(nm)).collect(Collectors.toList());
+
+		List<Employee> lst = elist.stream().filter(e -> e.getPname().equalsIgnoreCase(nm)).collect(Collectors.toList());
 		return lst;
 	}
 
 	@Override
 	public boolean removeById(int id) {
-		/*
-		 * Iterator<Employee> it=elist.iterator(); while(it.hasNext()) { Employee
-		 * e=it.next(); if(e.getPid()==id) { it.remove(); return true; } } return false;
-		 */
-		/*
-		 * int pos=elist.indexOf(new SalariedEmp(id)); if(pos!=-1) { elist.remove(pos);
-		 * }
-		 */
+//		Iterator<Employee> it = elist.iterator();
+//		while (it.hasNext()) {
+//			Employee e = it.next();
+//			if (e.getPid() == id) {
+//				it.remove();
+//				return true;
+//			}
+//		}
+//		return false;
+
+//		int pos = elist.indexOf(new SalariedEmp(id));
+//		if (pos != -1) {
+//			elist.remove(pos);
+//		}
+
 		// elist.removeIf(e->e.getPname().equals(nm));
 		// return elist.removeIf(e -> e.getPid() == id);
 
