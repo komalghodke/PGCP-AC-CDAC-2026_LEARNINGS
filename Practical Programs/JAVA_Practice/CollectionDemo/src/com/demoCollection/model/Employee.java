@@ -16,6 +16,10 @@ public abstract class Employee extends Person {
 		System.out.println("in Employee parameterised constructor");
 	}
 
+	public Employee(int id) {
+		super(id);
+	}
+
 	public String getDept() {
 		return dept;
 	}
@@ -34,7 +38,7 @@ public abstract class Employee extends Person {
 
 	@Override
 	public String toString() {
-		return "Employee [dept=" + dept + ", desg=" + desg + "]";
+		return super.toString()+"Employee [dept=" + dept + ", desg=" + desg + "]";
 	}
 
 	abstract public double calculateSal();

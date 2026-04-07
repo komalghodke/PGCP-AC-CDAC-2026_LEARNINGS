@@ -15,6 +15,10 @@ public class SalariedEmp extends Employee {
 		this.bonus = sal * 0.10;
 	}
 
+	public SalariedEmp(int id) {
+		super(id);
+	}
+
 	public double getSal() {
 		return sal;
 	}
@@ -33,7 +37,7 @@ public class SalariedEmp extends Employee {
 
 	@Override
 	public String toString() {
-		return "SalariedEmp [sal=" + sal + ", bonus=" + bonus + "]";
+		return super.toString()+ "SalariedEmp [sal=" + sal + ", bonus=" + bonus + "]";
 	}
 
 	@Override
