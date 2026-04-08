@@ -20,7 +20,7 @@ public class Person implements Comparable<Person> {
 	}
 
 	public Person(int id) {
-		pid=id;
+		pid = id;
 	}
 
 	public int getPid() {
@@ -54,24 +54,21 @@ public class Person implements Comparable<Person> {
 
 	@Override
 	public int compareTo(Person o) {
-		System.out.println("in compareTo method "+this.pid+"-------"+o.pid);
-		/*if(this.pid<o.pid)
-			return -1;
-		else if(this.pid==o.pid) {
-			return 0;
-		}else {
-			return 1;
-		}*/ 
-		            
-		return this.pid-o.pid;
-		//return (int)(this.sal-o.sal);
-		//return this.pname.compareTo(o.pname)
+		System.out.println("in compareTo method " + this.pid + "-------" + o.pid);
+		/*
+		 * if(this.pid<o.pid) return -1; else if(this.pid==o.pid) { return 0; }else {
+		 * return 1; }
+		 */
+
+		return this.pid - o.pid;
+		// return (int)(this.sal-o.sal);
+		// return this.pname.compareTo(o.pname)
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		Person other = (Person) obj;
-		System.out.println("in persons equals method  "+this.pid+"--------"+other.pid);
+		System.out.println("in persons equals method  " + this.pid + "--------" + other.pid);
 		return this.pid == other.pid;
 	}
 }
