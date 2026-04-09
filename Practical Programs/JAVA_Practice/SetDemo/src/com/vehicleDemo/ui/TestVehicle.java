@@ -113,7 +113,7 @@ public class TestVehicle {
 			}
 
 			}
-		} while (choice != 12);
+		} while (choice != 11);
 	}
 
 }
