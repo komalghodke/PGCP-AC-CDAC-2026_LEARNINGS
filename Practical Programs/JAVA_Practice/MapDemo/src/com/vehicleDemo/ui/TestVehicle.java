@@ -1,6 +1,7 @@
 package com.vehicleDemo.ui;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -13,6 +14,7 @@ public class TestVehicle {
 		Scanner sc = new Scanner(System.in);
 		int choice = 0;
 		VehicleService vservice = new VehicleServiceImpl();
+
 		do {
 			System.out.println("1. Add New Vehicle \n 2. Delete By id \n 3. Modify Price by Id \n "
 					+ "4. Display All \n 5. Display By Id \n 6. Display By Name \n 7. Display By Price \n"
@@ -56,7 +58,7 @@ public class TestVehicle {
 			}
 
 			case 4 -> {
-				Set<Vehicle> vs = vservice.getAll();
+				List<Vehicle> vs = vservice.getAll();
 				vs.forEach(System.out::println);
 			}
 
@@ -94,8 +96,9 @@ public class TestVehicle {
 			}
 
 			case 8 -> {
-				List<Vehicle> vlist = vservice.sortById();
-				vlist.forEach(System.out::println);
+				Map<Integer, Vehicle> vmap = vservice.sortById();
+				System.out.println("-------------sortby id-----" + vmap);
+				vmap.forEach((k, v) -> System.out.println(v));
 			}
 
 			case 9 -> {

@@ -1,7 +1,7 @@
 package com.vehicleDemo.service;
 
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 import com.vehicleDemo.model.Vehicle;
 
@@ -13,7 +13,7 @@ public interface VehicleService {
 
 	boolean updatePrice(int id, double nprice);
 
-	Set<Vehicle> getAll();
+	List<Vehicle> getAll();
 
 	List<Vehicle> getByPrice(double p);
 
@@ -21,7 +21,7 @@ public interface VehicleService {
 
 	List<Vehicle> getByName(String nm);
 
-	List<Vehicle> sortById();
+	Map<Integer, Vehicle> sortById();
 
 	List<Vehicle> sortByName();
 

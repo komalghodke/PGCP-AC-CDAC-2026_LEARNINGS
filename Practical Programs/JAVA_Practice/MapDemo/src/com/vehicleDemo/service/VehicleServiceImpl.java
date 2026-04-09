@@ -1,6 +1,10 @@
 package com.vehicleDemo.service;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 
 import com.vehicleDemo.dao.VehicleDao;
@@ -9,10 +13,11 @@ import com.vehicleDemo.model.Vehicle;
 
 public class VehicleServiceImpl implements VehicleService {
 
-	VehicleDao vdao = new VehicleDaoImpl();
+	VehicleDao vdao;
 
 	public VehicleServiceImpl() {
 		super();
+		vdao = new VehicleDaoImpl();
 	}
 
 	public VehicleServiceImpl(VehicleDao vdao) {
@@ -22,60 +27,64 @@ public class VehicleServiceImpl implements VehicleService {
 
 	@Override
 	public boolean addNewVehicle() {
-		return false;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter Vehicle id: ");
+		int id=sc.nextInt();
+		System.out.println("Enter Vehicle Name: ");
+		String nm= sc.next();
+		System.out.println("Enter Vehicle model: ");
+		String model= sc.next();
+		System.out.println("Enter Vehicle price: ");
+		double price=sc.nextDouble();
+		System.out.println("Enter the date (dd/MM/yyyy)");
+		String date=sc.next();
+		LocalDate ldt = LocalDate.parse(date, DateTimeFormatter.ofPattern("d/M/yyyy"));
+		return vdao.addNewVehicle(new Vehicle(id,nm,price,model,ldt));
 	}
 
 	@Override
 	public boolean DeleteById(int id) {
-		return false;
+		return vdao.DeleteById(id);
 	}
 
 	@Override
 	public boolean updatePrice(int id, double nprice) {
-		// TODO Auto-generated method stub
-		return false;
+		return vdao.updatePrice(id, nprice);
 	}
 
 	@Override
-	public Set<Vehicle> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Vehicle> getAll() {
+		return vdao.getAll();
 	}
 
 	@Override
 	public List<Vehicle> getByPrice(double p) {
-		// TODO Auto-generated method stub
-		return null;
+		return vdao.getByPrice(p);
 	}
 
 	@Override
 	public Vehicle getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return vdao.getById(id);
 	}
 
 	@Override
 	public List<Vehicle> getByName(String nm) {
-		// TODO Auto-generated method stub
-		return null;
+		return vdao.getByName(nm);
 	}
 
 	@Override
-	public List<Vehicle> sortById() {
-		// TODO Auto-generated method stub
-		return null;
+	public Map<Integer, Vehicle> sortById() {
+		return vdao.sortById();
 	}
 
 	@Override
 	public List<Vehicle> sortByName() {
-		// TODO Auto-generated method stub
-		return null;
+		return vdao.sortByName();
 	}
 
 	@Override
 	public List<Vehicle> sortByPrice() {
-		// TODO Auto-generated method stub
-		return null;
+		return vdao.sortByPrice();
 	}
 
 }
