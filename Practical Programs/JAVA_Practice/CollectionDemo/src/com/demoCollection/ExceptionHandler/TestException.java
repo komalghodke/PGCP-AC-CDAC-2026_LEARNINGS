@@ -12,9 +12,9 @@ public class TestException {
 		Scanner sc = new Scanner(System.in);
 		for (int i = 1; i <= 3; i++) {
 			try {
-				System.out.println("enter a number");
+				System.out.println("Enter a number");
 				int num1 = sc.nextInt();
-				System.out.println("enter a number");
+				System.out.println("Enter a number");
 				int num2 = sc.nextInt();
 				int ans = divide(num1, num2);
 				System.out.println("Ans: " + ans);
