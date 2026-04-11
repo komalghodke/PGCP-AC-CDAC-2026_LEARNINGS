@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-public class TreeHashMapTest {
+public class TreeHashMap {
 
 	public static void main(String[] args) {
 		Map<String, Integer> hm = new TreeMap<>();
