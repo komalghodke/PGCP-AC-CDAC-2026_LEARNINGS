@@ -14,13 +14,13 @@ public class EnumTest {
 		Coffee ch = Coffee.values()[choice];
 		switch (ch) {
 		case big -> {
-			System.out.println("You selected big " + ch.getSize() + "ml " + ch.getCost() + " Rs.");
+			System.out.println("You selected big: " + ch.getSize() + " ml " + ch.getCost() + " Rs.");
 		}
 		case small -> {
-			System.out.println("You selected small " + ch.getSize() + "ml " + ch.getCost() + " Rs.");
+			System.out.println("You selected small: " + ch.getSize() + " ml " + ch.getCost() + " Rs.");
 		}
 		case medium -> {
-			System.out.println("You selected medium " + ch.getSize() + "ml " + ch.getCost() + " Rs.");
+			System.out.println("You selected medium: " + ch.getSize() + " ml " + ch.getCost() + " Rs.");
 		}
 		default -> {
 			System.out.println("Invalid Choice!");
