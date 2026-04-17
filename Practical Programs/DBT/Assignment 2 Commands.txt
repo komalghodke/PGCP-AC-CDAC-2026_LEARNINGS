@@ -1,0 +1,304 @@
+Q.1.	Display the Employee Name, Job, and Start Date of Employees hired from February 1981 to May 1981.
+mysql> select ename, job, hiredate from emp where hiredate between '1981-02-01' AND '1981-05-31';
++-------+----------+------------+
+| ename | job      | hiredate   |
++-------+----------+------------+
+| ALLEN | SALESMAN | 1981-02-20 |
+| WARD  | SALESMAN | 1981-02-22 |
+| JONES | MANAGER  | 1981-04-02 |
+| BLAKE | MANAGER  | 1981-05-01 |
++-------+----------+------------+
+4 rows in set (0.00 sec)
+
+Q. 2.	Display the Name and Hiredate of every Employee who was hired in 1982.
+mysql> select ename, hiredate from emp where year(hiredate) = 1982;
++---------+------------+
+| ename   | hiredate   |
++---------+------------+
+| SCOTT   | 1982-12-09 |
+| HOFFMAN | 1982-03-24 |
+| MILLER  | 1982-01-23 |
+| ALEX    | 1982-01-24 |
++---------+------------+
+4 rows in set (0.00 sec)
+
+Q. 3.	Write a query to display the current date. Label the column as Current Date.
+mysql> select CURDATE() as 'Current_Date';
++--------------+
+| Current_Date |
++--------------+
+| 2026-04-17   |
++--------------+
+1 row in set (0.00 sec)
+
+Q. 4.	Display the Employee’s Name, Hiredate, Salary and Review Date, which is first Monday after six months of service.
+mysql> SELECT ename,
+    ->        hiredate,
+    ->        sal AS Salary,
+    ->        DATE_ADD(
+    ->          DATE_ADD(hiredate, INTERVAL 6 MONTH),
+    ->          INTERVAL ( (7 - WEEKDAY(DATE_ADD(hiredate, INTERVAL 6 MONTH))) % 7 ) DAY
+    ->        ) AS Review_Date
+    -> FROM emp;
++----------+------------+--------+-------------+
+| ename    | hiredate   | Salary | Review_Date |
++----------+------------+--------+-------------+
+| GITA     | 1981-07-19 |   1750 | 1982-01-25  |
+| VRUSHALI | 1981-07-19 |   1750 | 1982-01-25  |
+| SHARMIN  | 1981-07-19 |   1750 | 1982-01-25  |
+| BANDISH  | 1981-07-19 |   1750 | 1982-01-25  |
+| SMITH    | 1980-12-17 |    800 | 1981-06-22  |
+| AARAV    | 1981-12-31 |   3350 | 1982-07-05  |
+| THOMAS   | 1981-07-19 |   1750 | 1982-01-25  |
+| ALLEN    | 1981-02-20 |   1600 | 1981-08-24  |
+| WARD     | 1981-02-22 |   1250 | 1981-08-24  |
+| JONES    | 1981-04-02 |   2975 | 1981-10-05  |
+| MARTIN   | 1981-09-28 |   1250 | 1982-03-29  |
+| BLAKE    | 1981-05-01 |   2850 | 1981-11-02  |
+| CLARK    | 1981-06-09 |   2450 | 1981-12-14  |
+| SCOTT    | 1982-12-09 |   3000 | 1983-06-13  |
+| KING     | 1981-11-17 |   5000 | 1982-05-17  |
+| FRED     | 1983-08-09 |   5000 | 1984-02-13  |
+| TURNER   | 1981-09-08 |   1500 | 1982-03-08  |
+| ADAMS    | 1983-01-12 |   1100 | 1983-07-18  |
+| Ruhan    | 1983-08-09 |   2000 | 1984-02-13  |
+| Neel     | 1983-08-09 |   1000 | 1984-02-13  |
+| JAMES    | 1981-12-03 |    950 | 1982-06-07  |
+| FORD     | 1981-12-03 |   3000 | 1982-06-07  |
+| HOFFMAN  | 1982-03-24 |   4150 | 1982-09-27  |
+| GRASS    | 1980-02-14 |   2575 | 1980-08-18  |
+| MILLER   | 1982-01-23 |   1300 | 1982-07-26  |
+| AARUSH   | 1980-02-14 |   1350 | 1980-08-18  |
+| ALEX     | 1982-01-24 |   1250 | 1982-07-26  |
+| NATASHA  | 1981-07-19 |   1750 | 1982-01-25  |
+| SANGITA  | 1981-07-19 |   1750 | 1982-01-25  |
+| SUPRIYA  | 1981-07-19 |   1750 | 1982-01-25  |
++----------+------------+--------+-------------+
+30 rows in set (0.00 sec)
+
+Q. 5.	Modify the query to display the dates as “Sunday, the Seventh of September, 1981”.
+mysql> SELECT ename,
+    ->        hiredate,
+    ->        sal AS Salary,
+    ->        DATE_FORMAT(
+    ->          DATE_ADD(
+    ->            DATE_ADD(hiredate, INTERVAL 6 MONTH),
+    ->            INTERVAL ( (7 - WEEKDAY(DATE_ADD(hiredate, INTERVAL 6 MONTH))) % 7 ) DAY
+    ->          ),
+    ->          '%W, the %D of %M, %Y'
+    ->        ) AS Review_Date
+    -> FROM emp;
++----------+------------+--------+-------------------------------------+
+| ename    | hiredate   | Salary | Review_Date                         |
++----------+------------+--------+-------------------------------------+
+| GITA     | 1981-07-19 |   1750 | Monday, the 25th of January, 1982   |
+| VRUSHALI | 1981-07-19 |   1750 | Monday, the 25th of January, 1982   |
+| SHARMIN  | 1981-07-19 |   1750 | Monday, the 25th of January, 1982   |
+| BANDISH  | 1981-07-19 |   1750 | Monday, the 25th of January, 1982   |
+| SMITH    | 1980-12-17 |    800 | Monday, the 22nd of June, 1981      |
+| AARAV    | 1981-12-31 |   3350 | Monday, the 5th of July, 1982       |
+| THOMAS   | 1981-07-19 |   1750 | Monday, the 25th of January, 1982   |
+| ALLEN    | 1981-02-20 |   1600 | Monday, the 24th of August, 1981    |
+| WARD     | 1981-02-22 |   1250 | Monday, the 24th of August, 1981    |
+| JONES    | 1981-04-02 |   2975 | Monday, the 5th of October, 1981    |
+| MARTIN   | 1981-09-28 |   1250 | Monday, the 29th of March, 1982     |
+| BLAKE    | 1981-05-01 |   2850 | Monday, the 2nd of November, 1981   |
+| CLARK    | 1981-06-09 |   2450 | Monday, the 14th of December, 1981  |
+| SCOTT    | 1982-12-09 |   3000 | Monday, the 13th of June, 1983      |
+| KING     | 1981-11-17 |   5000 | Monday, the 17th of May, 1982       |
+| FRED     | 1983-08-09 |   5000 | Monday, the 13th of February, 1984  |
+| TURNER   | 1981-09-08 |   1500 | Monday, the 8th of March, 1982      |
+| ADAMS    | 1983-01-12 |   1100 | Monday, the 18th of July, 1983      |
+| Ruhan    | 1983-08-09 |   2000 | Monday, the 13th of February, 1984  |
+| Neel     | 1983-08-09 |   1000 | Monday, the 13th of February, 1984  |
+| JAMES    | 1981-12-03 |    950 | Monday, the 7th of June, 1982       |
+| FORD     | 1981-12-03 |   3000 | Monday, the 7th of June, 1982       |
+| HOFFMAN  | 1982-03-24 |   4150 | Monday, the 27th of September, 1982 |
+| GRASS    | 1980-02-14 |   2575 | Monday, the 18th of August, 1980    |
+| MILLER   | 1982-01-23 |   1300 | Monday, the 26th of July, 1982      |
+| AARUSH   | 1980-02-14 |   1350 | Monday, the 18th of August, 1980    |
+| ALEX     | 1982-01-24 |   1250 | Monday, the 26th of July, 1982      |
+| NATASHA  | 1981-07-19 |   1750 | Monday, the 25th of January, 1982   |
+| SANGITA  | 1981-07-19 |   1750 | Monday, the 25th of January, 1982   |
+| SUPRIYA  | 1981-07-19 |   1750 | Monday, the 25th of January, 1982   |
++----------+------------+--------+-------------------------------------+
+30 rows in set (0.05 sec)
+
+Q. 6.	Create a query to display the name and salary for all Employees. Format the salary to be 15 characters long by adding ‘$’.
+mysql> SELECT ename,
+    ->        LPAD(CONCAT('$', sal), 15, ' ') AS Formatted_Salary
+    -> FROM emp;
++----------+------------------+
+| ename    | Formatted_Salary |
++----------+------------------+
+| GITA     |           $1750  |
+| VRUSHALI |           $1750  |
+| SHARMIN  |           $1750  |
+| BANDISH  |           $1750  |
+| SMITH    |            $800  |
+| AARAV    |           $3350  |
+| THOMAS   |           $1750  |
+| ALLEN    |           $1600  |
+| WARD     |           $1250  |
+| JONES    |           $2975  |
+| MARTIN   |           $1250  |
+| BLAKE    |           $2850  |
+| CLARK    |           $2450  |
+| SCOTT    |           $3000  |
+| KING     |           $5000  |
+| FRED     |           $5000  |
+| TURNER   |           $1500  |
+| ADAMS    |           $1100  |
+| Ruhan    |           $2000  |
+| Neel     |           $1000  |
+| JAMES    |            $950  |
+| FORD     |           $3000  |
+| HOFFMAN  |           $4150  |
+| GRASS    |           $2575  |
+| MILLER   |           $1300  |
+| AARUSH   |           $1350  |
+| ALEX     |           $1250  |
+| NATASHA  |           $1750  |
+| SANGITA  |           $1750  |
+| SUPRIYA  |           $1750  |
++----------+------------------+
+30 rows in set (0.00 sec)
+
+Q.7 Display the Name, Hiredate and day of the week on which the employees started. Order the results by the Day of the week starting with Monday.
+mysql> SELECT ename,
+    ->        hiredate,
+    ->        DAYNAME(hiredate) AS Start_Day
+    -> FROM emp
+    -> ORDER BY WEEKDAY(hiredate);
++----------+------------+-----------+
+| ename    | hiredate   | Start_Day |
++----------+------------+-----------+
+| MARTIN   | 1981-09-28 | Monday    |
+| CLARK    | 1981-06-09 | Tuesday   |
+| KING     | 1981-11-17 | Tuesday   |
+| FRED     | 1983-08-09 | Tuesday   |
+| TURNER   | 1981-09-08 | Tuesday   |
+| Ruhan    | 1983-08-09 | Tuesday   |
+| Neel     | 1983-08-09 | Tuesday   |
+| SMITH    | 1980-12-17 | Wednesday |
+| ADAMS    | 1983-01-12 | Wednesday |
+| HOFFMAN  | 1982-03-24 | Wednesday |
+| AARAV    | 1981-12-31 | Thursday  |
+| JONES    | 1981-04-02 | Thursday  |
+| SCOTT    | 1982-12-09 | Thursday  |
+| JAMES    | 1981-12-03 | Thursday  |
+| FORD     | 1981-12-03 | Thursday  |
+| GRASS    | 1980-02-14 | Thursday  |
+| AARUSH   | 1980-02-14 | Thursday  |
+| ALLEN    | 1981-02-20 | Friday    |
+| BLAKE    | 1981-05-01 | Friday    |
+| MILLER   | 1982-01-23 | Saturday  |
+| GITA     | 1981-07-19 | Sunday    |
+| VRUSHALI | 1981-07-19 | Sunday    |
+| SHARMIN  | 1981-07-19 | Sunday    |
+| BANDISH  | 1981-07-19 | Sunday    |
+| THOMAS   | 1981-07-19 | Sunday    |
+| WARD     | 1981-02-22 | Sunday    |
+| ALEX     | 1982-01-24 | Sunday    |
+| NATASHA  | 1981-07-19 | Sunday    |
+| SANGITA  | 1981-07-19 | Sunday    |
+| SUPRIYA  | 1981-07-19 | Sunday    |
++----------+------------+-----------+
+30 rows in set (0.00 sec)
+
+
+Q. 8.	Display details of orders received in the year 1986. 
+mysql> select * from orders where year(odate) = 1996; //1986
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType  | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+| 2322 |   750.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          0 | NULL             |
+| 2364 |   750.1 | 1996-10-03 12:07:00 | NULL | 1004 | Online | PhonePe      |          0 | NULL             |
+| 2475 |   750.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          0 | NULL             |
+| 3001 |   18.69 | 1996-10-03 12:30:00 | 2008 | 1007 | Online | Credit Cards |          1 | NULL             |
+| 3002 |  1900.1 | 1996-10-03 12:30:00 | 2007 | 1004 | Online | Wallets      |          1 | NULL             |
+| 3003 |  767.19 | 1996-10-03 13:45:00 | 2001 | 1001 | Online | Debit Cards  |          1 | NULL             |
+| 3005 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1002 | Online | Debit Cards  |          1 | NULL             |
+| 3006 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3007 |   75.75 | 1996-10-04 15:21:00 | 2002 | 1003 | Online | Credit Cards |          1 | NULL             |
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD          |          0 | NULL             |
+| 3009 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Online | Credit Cards |          1 | NULL             |
+| 3010 | 1309.95 | 1996-10-06 13:12:00 | 2004 | 1002 | Online | EMI Options  |          1 | NULL             |
+| 3011 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | EMI Options  |          1 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3013 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online | EMI Options  |          1 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD          |          0 | NULL             |
+| 3015 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Online | EMI Options  |          1 | NULL             |
+| 3016 | 1729.67 | 1996-10-06 13:18:00 | 2006 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3017 |   18.69 | 1996-10-03 12:30:00 | 2001 | 1007 | Online | Credit Cards |          1 | NULL             |
+| 3018 |  767.19 | 1996-10-03 12:05:00 | 2002 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3019 |  1900.1 | 1996-10-03 12:05:00 | 2007 | 1004 | Online | EMI Options  |          1 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD          |          0 | NULL             |
+| 3021 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Debit Cards  |          1 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3023 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1004 | Online | Wallets      |          1 | NULL             |
+| 3024 |    4723 | 1996-10-05 12:07:00 | 2006 | 1002 | Online | Credit Cards |          1 | NULL             |
+| 3025 | 1309.95 | 1996-10-06 13:12:00 | 2002 | 1002 | Online | Wallets      |          1 | NULL             |
+| 3026 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3028 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online | Debit Cards  |          1 | NULL             |
+| 3029 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Online | Credit Cards |          1 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD          |          0 | NULL             |
+| 3031 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3032 | 3434.55 | 1996-01-26 17:09:12 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash   | COD          |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3050 |  1900.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          0 | NULL             |
+| 3074 |   457.4 | 1996-04-19 05:13:00 | 2008 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 3119 |   125.5 | 1996-07-26 18:37:00 | 2007 | 1001 | Online | Wallets      |          1 | NULL             |
+| 4001 |   145.2 | 1996-05-13 20:47:00 | 2008 | 1003 | Online | EMI Options  |          1 | NULL             |
+| 4012 |   245.6 | 1996-03-06 13:07:00 | 2001 | 1002 | Online | Wallets      |          1 | NULL             |
+| 4021 |  600.65 | 1996-08-12 13:07:00 | 2001 | 1002 | Online | Wallets      |          1 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD          |          0 | NULL             |
+| 5001 |  325.23 | 1996-11-04 15:21:00 | NULL | 1002 | Online | GPay         |          0 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash   | COD          |          0 | NULL             |
+| 5014 |  980.65 | 1996-08-23 13:07:00 | 2002 | 1007 | Online | Wallets      |          1 | NULL             |
+| 5015 | 2133.35 | 1996-06-23 13:07:00 | 2004 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD          |          0 | NULL             |
+| 5020 |  950.45 | 1996-10-03 14:00:00 | NULL | 1007 | Online | Paytm        |          0 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash   | COD          |          0 | NULL             |
+| 5053 |  1500.5 | 1996-01-01 13:07:00 | 2006 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 5056 |   750.1 | 1996-10-03 12:05:00 | NULL | 1007 | Online | PhonePe      |          0 | NULL             |
+| 5099 |  790.75 | 1996-04-24 13:07:00 | 2002 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 6501 |  125.45 | 1996-06-13 13:07:00 | 2001 | 1001 | Online | EMI Options  |          1 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash   | COD          |          0 | NULL             |
+| 6503 | 1100.25 | 1996-07-26 13:07:00 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD          |          0 | NULL             |
+| 6605 |  1900.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          0 | NULL             |
+| 6606 | 5160.45 | 1996-10-03 14:00:00 | NULL | 1002 | Online | Paytm        |          0 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD          |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay         |          0 | NULL             |
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+61 rows in set (0.00 sec)
+
+Q.9. Write a query to find out the DAY (for example, SUNDAY) of the current date.
+
+mysql> SELECT DAYNAME(CURDATE()) AS Current_Day;
++-------------+
+| Current_Day |
++-------------+
+| Friday      |
++-------------+
+1 row in set (0.00 sec)
+
+10.	Display the name and the date of joining of the employees who belong to department number 10. The date of joining should be formatted. For eg. if it is ‘10-JUN-97’ it should be displayed as Fifteenth JUNE, 1997. The name of the employee should be in upper case
+
+mysql> SELECT UPPER(ename) AS Employee_Name,
+    ->        DATE_FORMAT(hiredate, '%D %M, %Y') AS Formatted_Join_Date
+    -> FROM emp
+    -> WHERE deptno = 10;
++---------------+---------------------+
+| Employee_Name | Formatted_Join_Date |
++---------------+---------------------+
+| AARAV         | 31st December, 1981 |
+| THOMAS        | 19th July, 1981     |
+| CLARK         | 9th June, 1981      |
+| KING          | 17th November, 1981 |
+| MILLER        | 23rd January, 1982  |
++---------------+---------------------+
+5 rows in set (0.00 sec)
