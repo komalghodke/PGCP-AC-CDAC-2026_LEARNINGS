@@ -286,7 +286,7 @@ mysql> SELECT DAYNAME(CURDATE()) AS Current_Day;
 +-------------+
 1 row in set (0.00 sec)
 
-10.	Display the name and the date of joining of the employees who belong to department number 10. The date of joining should be formatted. For eg. if it is ‘10-JUN-97’ it should be displayed as Fifteenth JUNE, 1997. The name of the employee should be in upper case
+Q. 10.	Display the name and the date of joining of the employees who belong to department number 10. The date of joining should be formatted. For eg. if it is ‘10-JUN-97’ it should be displayed as Fifteenth JUNE, 1997. The name of the employee should be in upper case
 
 mysql> SELECT UPPER(ename) AS Employee_Name,
     ->        DATE_FORMAT(hiredate, '%D %M, %Y') AS Formatted_Join_Date
@@ -302,3 +302,372 @@ mysql> SELECT UPPER(ename) AS Employee_Name,
 | MILLER        | 23rd January, 1982  |
 +---------------+---------------------+
 5 rows in set (0.00 sec)
+
+
+Q. 11. Consider the Ord table. Find the difference between the Order Date and Ship Date in months as well as days. Label the columns appropriately.
+
+SELECT 
+    ORDID,
+    ORDERDATE,
+    SHIPDATE,
+    TIMESTAMPDIFF(MONTH, ORDERDATE, SHIPDATE) AS Diff_Months,
+    TIMESTAMPDIFF(DAY, ORDERDATE, SHIPDATE) AS Diff_Days
+FROM ord;
+
++-------+------------+------------+-------------+-----------+
+| ORDID | ORDERDATE  | SHIPDATE   | Diff_Months | Diff_Days |
++-------+------------+------------+-------------+-----------+
+|   601 | 1986-05-01 | 1986-05-30 |           0 |        29 |
+|   602 | 1986-06-05 | 1986-06-20 |           0 |        15 |
+|   603 | 1986-06-05 | 1986-06-05 |           0 |         0 |
+|   604 | 1986-06-15 | 1986-05-30 |           0 |       -16 |
+|   606 | 1986-07-14 | 1986-07-30 |           0 |        16 |
+|   607 | 1986-07-18 | 1986-07-18 |           0 |         0 |
+|   608 | 1986-07-25 | 1986-07-25 |           0 |         0 |
+|   609 | 1986-08-01 | 1986-08-15 |           0 |        14 |
+|   610 | 1987-01-07 | 1987-01-08 |           0 |         1 |
+|   611 | 1987-01-11 | 1987-01-11 |           0 |         0 |
+|   612 | 1987-01-15 | 1987-01-20 |           0 |         5 |
+|   613 | 1987-02-01 | 1987-02-01 |           0 |         0 |
+|   614 | 1987-02-01 | 1987-02-05 |           0 |         4 |
+|   615 | 1987-02-01 | 1987-02-06 |           0 |         5 |
+|   616 | 1987-02-03 | 1987-02-10 |           0 |         7 |
+|   617 | 1987-02-05 | 1987-03-03 |           0 |        26 |
+|   618 | 1987-02-15 | 1987-03-06 |           0 |        19 |
+|   619 | 1987-02-22 | 1987-02-04 |           0 |       -18 |
+|   620 | 1987-03-12 | 1987-03-12 |           0 |         0 |
+|   621 | 1987-03-15 | 1987-03-01 |           0 |       -14 |
+|   622 | 1986-12-31 | 1987-01-01 |           0 |         1 |
+|   624 | 1987-01-06 | 1987-01-06 |           0 |         0 |
+|   625 | 1987-01-09 | 1987-01-10 |           0 |         1 |
+|   626 | 1987-01-31 | 1987-02-01 |           0 |         1 |
+|   627 | 1987-02-13 | 1987-02-14 |           0 |         1 |
+|   628 | 1987-03-13 | 1987-03-14 |           0 |         1 |
+|   629 | 1987-03-14 | 1987-03-16 |           0 |         2 |
+|   630 | 1987-02-21 | 1987-02-22 |           0 |         1 |
+|   631 | 1987-02-23 | 1987-02-23 |           0 |         0 |
+|   632 | 1987-03-13 | 1987-03-14 |           0 |         1 |
+|   633 | 1987-03-14 | 1987-03-16 |           0 |         2 |
+|   634 | 1987-02-21 | 1987-02-22 |           0 |         1 |
+|   635 | 1987-02-23 | 1987-02-23 |           0 |         0 |
++-------+------------+------------+-------------+-----------+
+33 rows in set (0.05 sec)
+
+Q.12 List employee details who have joined in December.
+
+SELECT 
+    EMPNO,
+    ENAME,
+    JOB,
+    HIREDATE,
+    MONTHNAME(HIREDATE) AS JoinMonth
+FROM emp
+WHERE MONTH(HIREDATE) = 12;
+
++-------+-------+---------+------------+-----------+
+| EMPNO | ENAME | JOB     | HIREDATE   | JoinMonth |
++-------+-------+---------+------------+-----------+
+|  7369 | SMITH | CLERK   | 1980-12-17 | December  |
+|  7415 | AARAV | CLERK   | 1981-12-31 | December  |
+|  7788 | SCOTT | ANALYST | 1982-12-09 | December  |
+|  7900 | JAMES | CLERK   | 1981-12-03 | December  |
+|  7902 | FORD  | ANALYST | 1981-12-03 | December  |
++-------+-------+---------+------------+-----------+
+5 rows in set (0.00 sec)
+
+Q. 13.	Display day on which KING joined.
+
+SELECT 
+    ENAME,
+    HIREDATE,
+    DAYNAME(HIREDATE) AS Join_Day
+FROM emp
+WHERE ENAME = 'KING';
+
++-------+------------+----------+
+| ENAME | HIREDATE   | Join_Day |
++-------+------------+----------+
+| KING  | 1981-11-17 | Tuesday  |
++-------+------------+----------+
+1 row in set (0.04 sec)
+
+Q. 14. Display month on which MARTIN joined.
+
+mysql> SELECT
+    ->     ENAME,
+    ->     HIREDATE,
+    ->     MONTHNAME(HIREDATE) AS Join_Month
+    -> FROM emp
+    -> WHERE ENAME = 'MARTIN';
++--------+------------+------------+
+| ENAME  | HIREDATE   | Join_Month |
++--------+------------+------------+
+| MARTIN | 1981-09-28 | September  |
++--------+------------+------------+
+1 row in set (0.00 sec)
+
+Q. 15.	Find number of days elapsed between today’s date and hiredate of ‘ADAMS’.
+
+mysql> SELECT
+    ->     ENAME,
+    ->     HIREDATE,
+    ->     DATEDIFF(CURDATE(), HIREDATE) AS Days_Elapsed
+    -> FROM emp
+    -> WHERE ENAME = 'ADAMS';
++-------+------------+--------------+
+| ENAME | HIREDATE   | Days_Elapsed |
++-------+------------+--------------+
+| ADAMS | 1983-01-12 |        15802 |
++-------+------------+--------------+
+1 row in set (0.03 sec)
+
+Q. 16.	Print the date, 15 days alter today’s date.
+mysql> SELECT DATE_ADD(CURDATE(), INTERVAL 15 DAY) AS Date_After_15_Days;
++--------------------+
+| Date_After_15_Days |
++--------------------+
+| 2026-05-03         |
++--------------------+
+1 row in set (0.00 sec)
+
+Q. 17.	List all employee hired in the month of December.
+mysql> SELECT
+    ->     EMPNO,
+    ->     ENAME,
+    ->     JOB,
+    ->     HIREDATE,
+    ->     MONTHNAME(HIREDATE) AS Hire_Month
+    -> FROM emp
+    -> WHERE MONTH(HIREDATE) = 12;
++-------+-------+---------+------------+------------+
+| EMPNO | ENAME | JOB     | HIREDATE   | Hire_Month |
++-------+-------+---------+------------+------------+
+|  7369 | SMITH | CLERK   | 1980-12-17 | December   |
+|  7415 | AARAV | CLERK   | 1981-12-31 | December   |
+|  7788 | SCOTT | ANALYST | 1982-12-09 | December   |
+|  7900 | JAMES | CLERK   | 1981-12-03 | December   |
+|  7902 | FORD  | ANALYST | 1981-12-03 | December   |
++-------+-------+---------+------------+------------+
+5 rows in set (0.00 sec)
+
+Q. 18.	List all employee hired after 1980.
+mysql> SELECT
+    ->     EMPNO,
+    ->     ENAME,
+    ->     JOB,
+    ->     HIREDATE,
+    ->     YEAR(HIREDATE) AS Hire_Year
+    -> FROM emp
+    -> WHERE YEAR(HIREDATE) > 1980;
++-------+----------+---------------------+------------+-----------+
+| EMPNO | ENAME    | JOB                 | HIREDATE   | Hire_Year |
++-------+----------+---------------------+------------+-----------+
+|  6001 | GITA     | Compliance officers | 1981-07-19 |      1981 |
+|  6129 | VRUSHALI | Compliance officers | 1981-07-19 |      1981 |
+|  6473 | SHARMIN  | Public Relation     | 1981-07-19 |      1981 |
+|  6781 | BANDISH  | Public Relation     | 1981-07-19 |      1981 |
+|  7415 | AARAV    | CLERK               | 1981-12-31 |      1981 |
+|  7421 | THOMAS   | CLERK               | 1981-07-19 |      1981 |
+|  7499 | ALLEN    | SALESMAN            | 1981-02-20 |      1981 |
+|  7521 | WARD     | SALESMAN            | 1981-02-22 |      1981 |
+|  7566 | JONES    | MANAGER             | 1981-04-02 |      1981 |
+|  7654 | MARTIN   | SALESMAN            | 1981-09-28 |      1981 |
+|  7698 | BLAKE    | MANAGER             | 1981-05-01 |      1981 |
+|  7782 | CLARK    | MANAGER             | 1981-06-09 |      1981 |
+|  7788 | SCOTT    | ANALYST             | 1982-12-09 |      1982 |
+|  7839 | KING     | PRESIDENT           | 1981-11-17 |      1981 |
+|  7840 | FRED     | vice PRESIDENT      | 1983-08-09 |      1983 |
+|  7844 | TURNER   | SALESMAN            | 1981-09-08 |      1981 |
+|  7876 | ADAMS    | CLERK               | 1983-01-12 |      1983 |
+|  7888 | Ruhan    | Network             | 1983-08-09 |      1983 |
+|  7889 | Neel     | vice PRESIDENT      | 1983-08-09 |      1983 |
+|  7900 | JAMES    | CLERK               | 1981-12-03 |      1981 |
+|  7902 | FORD     | ANALYST             | 1981-12-03 |      1981 |
+|  7919 | HOFFMAN  | MANAGER             | 1982-03-24 |      1982 |
+|  7934 | MILLER   | CLERK               | 1982-01-23 |      1982 |
+|  7949 | ALEX     | MANAGER             | 1982-01-24 |      1982 |
+|  8433 | NATASHA  | CLERK               | 1981-07-19 |      1981 |
+|  9400 | SANGITA  | Compliance officers | 1981-07-19 |      1981 |
+|  9473 | SUPRIYA  | ANALYST             | 1981-07-19 |      1981 |
++-------+----------+---------------------+------------+-----------+
+
+Q. 19.	Display names and jobs of employee in the format SMITH-CLERK.
+mysql> SELECT
+    ->     CONCAT(ENAME, '-', JOB) AS Employee_Details
+    -> FROM emp;
++------------------------------+
+| Employee_Details             |
++------------------------------+
+| GITA-Compliance officers     |
+| VRUSHALI-Compliance officers |
+| SHARMIN-Public Relation      |
+| BANDISH-Public Relation      |
+| SMITH-CLERK                  |
+| AARAV-CLERK                  |
+| THOMAS-CLERK                 |
+| ALLEN-SALESMAN               |
+| WARD-SALESMAN                |
+| JONES-MANAGER                |
+| MARTIN-SALESMAN              |
+| BLAKE-MANAGER                |
+| CLARK-MANAGER                |
+| SCOTT-ANALYST                |
+| KING-PRESIDENT               |
+| FRED-vice PRESIDENT          |
+| TURNER-SALESMAN              |
+| ADAMS-CLERK                  |
+| Ruhan-Network                |
+| Neel-vice PRESIDENT          |
+| JAMES-CLERK                  |
+| FORD-ANALYST                 |
+| HOFFMAN-MANAGER              |
+| GRASS-SALESMAN               |
+| MILLER-CLERK                 |
+| AARUSH-SALESMAN              |
+| ALEX-MANAGER                 |
+| NATASHA-CLERK                |
+| SANGITA-Compliance officers  |
+| SUPRIYA-ANALYST              |
++------------------------------+
+30 rows in set (0.00 sec)
+
+Q. 20.	Show the length of names in EMP table. Eliminate duplicate length. Do not show the names.
+
+mysql> SELECT DISTINCT LENGTH(ENAME) AS Name_Length
+    -> FROM emp;
++-------------+
+| Name_Length |
++-------------+
+|           4 |
+|           8 |
+|           7 |
+|           5 |
+|           6 |
++-------------+
+5 rows in set (0.05 sec)
+
+Q. 21 List the names and hiredate of EMP in dept 20, display hiredate formatted as 12/03/1984.
+
+mysql> SELECT
+    ->     ENAME,
+    ->     DATE_FORMAT(HIREDATE, '%d/%m/%Y') AS Formatted_HireDate
+    -> FROM emp
+    -> WHERE DEPTNO = 20;
++---------+--------------------+
+| ENAME   | Formatted_HireDate |
++---------+--------------------+
+| SHARMIN | 19/07/1981         |
+| BANDISH | 19/07/1981         |
+| SMITH   | 17/12/1980         |
+| JONES   | 02/04/1981         |
+| SCOTT   | 09/12/1982         |
+| FRED    | 09/08/1983         |
+| ADAMS   | 12/01/1983         |
+| FORD    | 03/12/1981         |
++---------+--------------------+
+8 rows in set (0.00 sec)
+
+Q. 22. Find the day of week on which SMITH joined.
+mysql> SELECT
+    ->     ENAME,
+    ->     HIREDATE,
+    ->     DAYNAME(HIREDATE) AS Join_Day
+    -> FROM emp
+    -> WHERE ENAME = 'SMITH';
++-------+------------+-----------+
+| ENAME | HIREDATE   | Join_Day  |
++-------+------------+-----------+
+| SMITH | 1980-12-17 | Wednesday |
++-------+------------+-----------+
+1 row in set (0.00 sec)
+
+23.	Retrieve the ANALYST record with hiredate formatted as ‘The 3rd of Oct. 1984’.
+mysql> SELECT
+    ->     ENAME,
+    ->     JOB,
+    ->     CONCAT('The ', DATE_FORMAT(HIREDATE, '%D'), ' of ', DATE_FORMAT(HIREDATE, '%b. %Y')) AS Formatted_HireDate
+    -> FROM emp
+    -> WHERE JOB = 'ANALYST';
++---------+---------+-----------------------+
+| ENAME   | JOB     | Formatted_HireDate    |
++---------+---------+-----------------------+
+| SCOTT   | ANALYST | The 9th of Dec. 1982  |
+| FORD    | ANALYST | The 3rd of Dec. 1981  |
+| SUPRIYA | ANALYST | The 19th of Jul. 1981 |
++---------+---------+-----------------------+
+3 rows in set (0.00 sec)
+
+24.	Calculate the total compensation expensive for each dept in 1 year. Assume that employees, who don't earn commission, receive non-monetary benefits than are worth Rs.1000 a month.
+
+mysql> SELECT
+    ->     DEPTNO,
+    ->     SUM(
+    ->         SAL * 12 +
+    ->         IFNULL(COMM, 0) +
+    ->         (CASE WHEN COMM IS NULL OR COMM = 0 THEN 12000 ELSE 0 END)
+    ->     ) AS Total_Compensation
+    -> FROM emp
+    -> GROUP BY DEPTNO;
++--------+--------------------+
+| DEPTNO | Total_Compensation |
++--------+--------------------+
+|     10 |             215500 |
+|     20 |             328500 |
+|     30 |             346800 |
+|     50 |              99000 |
+|     60 |              60000 |
++--------+--------------------+
+5 rows in set (0.04 sec)
+
+
+25.	Display the Names of the Managers as follows-
+a.	If the employee code is 7788 the Manager is CLARK
+b.	If the employee code is 7698 the Manager is BLAKE
+c.	If the employee code is 7566 the Manager is JONES
+d.	For all other Employees the Manager is KING
+mysql> SELECT
+    ->     EMPNO,
+    ->     ENAME,
+    ->     CASE
+    ->         WHEN EMPNO = 7788 THEN 'CLARK'
+    ->         WHEN EMPNO = 7698 THEN 'BLAKE'
+    ->         WHEN EMPNO = 7566 THEN 'JONES'
+    ->         ELSE 'KING'
+    ->     END AS Manager
+    -> FROM emp;
++-------+----------+---------+
+| EMPNO | ENAME    | Manager |
++-------+----------+---------+
+|  6001 | GITA     | KING    |
+|  6129 | VRUSHALI | KING    |
+|  6473 | SHARMIN  | KING    |
+|  6781 | BANDISH  | KING    |
+|  7369 | SMITH    | KING    |
+|  7415 | AARAV    | KING    |
+|  7421 | THOMAS   | KING    |
+|  7499 | ALLEN    | KING    |
+|  7521 | WARD     | KING    |
+|  7566 | JONES    | JONES   |
+|  7654 | MARTIN   | KING    |
+|  7698 | BLAKE    | BLAKE   |
+|  7782 | CLARK    | KING    |
+|  7788 | SCOTT    | CLARK   |
+|  7839 | KING     | KING    |
+|  7840 | FRED     | KING    |
+|  7844 | TURNER   | KING    |
+|  7876 | ADAMS    | KING    |
+|  7888 | Ruhan    | KING    |
+|  7889 | Neel     | KING    |
+|  7900 | JAMES    | KING    |
+|  7902 | FORD     | KING    |
+|  7919 | HOFFMAN  | KING    |
+|  7920 | GRASS    | KING    |
+|  7934 | MILLER   | KING    |
+|  7945 | AARUSH   | KING    |
+|  7949 | ALEX     | KING    |
+|  8433 | NATASHA  | KING    |
+|  9400 | SANGITA  | KING    |
+|  9473 | SUPRIYA  | KING    |
++-------+----------+---------+
+30 rows in set (0.00 sec)
+
