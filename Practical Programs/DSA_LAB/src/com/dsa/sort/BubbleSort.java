@@ -15,7 +15,6 @@ public class BubbleSort {
 					arr[j - 1] = arr[j];
 					arr[j] = temp;
 				}
-
 			}
 			System.out.println("iteration : " + i + " swap count: " + count);
 			System.out.println(Arrays.toString(arr));
