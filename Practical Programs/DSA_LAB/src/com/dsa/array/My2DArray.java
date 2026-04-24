@@ -38,6 +38,16 @@ public class My2DArray {
 		}
 	}
 
+	public int[] findSumRowWise() {
+		int[] sumR = new int[arr.length];
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				sumR[i] += arr[i][j];
+				}
+		}
+		return sumR;
+	}
+
 	public char[] isIdentity() {
 		return null;
 	}
