@@ -11,13 +11,10 @@ public class SelectionSortTest {
 					minIndex = j;
 				}
 			}
-			// swap
-			if (minIndex != i) {
-				int temp = arr[i];
-				arr[i] = arr[minIndex];
-				arr[minIndex] = temp;
-			}
-			System.out.println("iteration " + i + ": " + Arrays.toString(arr));
+			int temp = arr[i];
+			arr[i] = arr[minIndex];
+			arr[minIndex] = temp;
+			System.out.println("iteration " + i + ": min element = " + arr[i] + ", array = " + Arrays.toString(arr));
 		}
 	}
 
@@ -27,5 +24,4 @@ public class SelectionSortTest {
 		selectionSort(arr);
 		System.out.println("Sorted: " + Arrays.toString(arr));
 	}
-
 }

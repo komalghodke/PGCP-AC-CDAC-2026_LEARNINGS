@@ -47,7 +47,7 @@ public class BubbleSort {
 			boolean flag = false;
 			for (int j = 1; j < arr.length - i; j++) {
 				if (arr[j - 1] > arr[j]) {
-					// swap elements
+					// swap element
 					count++;
 					flag = true;
 					int temp = arr[j - 1];
