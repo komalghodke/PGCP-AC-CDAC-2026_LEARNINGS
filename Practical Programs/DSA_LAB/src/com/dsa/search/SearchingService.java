@@ -10,22 +10,20 @@ public class SearchingService {
 		return -1;
 	}
 
-	public static int binarySearchNonRecurssive(int[] arr, int searchnum) {
-		int low = 0;
-		int high = arr.length - 1;
+	public static int binarySearchNonRecurssive(int[] arr, int target) {
+		int low = 0, high = arr.length - 1;
 		int cnt = 0;
 		while (low <= high) {
-
 			int mid = (low + high) / 2;
-			System.out.println("low: " + low + " high: " + high + " mid: " + mid);
 			cnt++;
-			if (arr[mid] == searchnum) {
+			System.out.println("low: " + low + " high: " + high + " mid: " + mid);
+			if (arr[mid] == target) {
 				System.out.println("number of comparisons : " + cnt);
 				return mid;
-			} else if (searchnum < arr[mid]) {
-				high = mid - 1;
-			} else {
+			} else if (target > arr[mid]) {
 				low = mid + 1;
+			} else {
+				high = mid - 1;
 			}
 		}
 		System.out.println("number of comparisons : " + cnt);
@@ -37,7 +35,6 @@ public class SearchingService {
 		if (low <= high) {
 			int mid = (low + high) / 2;
 			if (arr[mid] == searchnum) {
-
 				return mid;
 			} else if (searchnum < arr[mid]) {
 				return binarySearchRecurssive(arr, searchnum, low, mid - 1);
@@ -47,4 +44,6 @@ public class SearchingService {
 		}
 		return -1;
 	}
+	
+	
 }

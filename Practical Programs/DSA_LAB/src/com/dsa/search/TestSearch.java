@@ -10,6 +10,7 @@ public class TestSearch {
 			System.out.println("not found" + "\n");
 
 		int[] arr1 = { 5, 7, 12, 15, 26, 31, 33, 34, 38, 56, 67, 77, 78, 89 };
+
 		pos = SearchingService.binarySearchNonRecurssive(arr1, 31);
 		if (pos != -1)
 			System.out.println("number found at : " + pos + "\n");
