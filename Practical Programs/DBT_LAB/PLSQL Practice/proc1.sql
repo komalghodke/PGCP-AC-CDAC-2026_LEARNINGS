@@ -45,3 +45,11 @@ SELECT "HELLO SQL!!!";
 end $
 delimiter ;
 */
+
+create procedure proc5(IN tname VARCHAR(60))
+begin
+	set @a:= CONCAT("select * from", tname);
+	end;
+	
+	
+	
