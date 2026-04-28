@@ -46,10 +46,13 @@ end $
 delimiter ;
 */
 
+drop PROCEDURE if EXISTS proc5;
+delimiter $
 create procedure proc5(IN tname VARCHAR(60))
 begin
 	set @a:= CONCAT("select * from", tname);
-	end;
+end $
+delimiter ;
 	
 	
 	
