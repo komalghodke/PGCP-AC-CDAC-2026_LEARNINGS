@@ -39,7 +39,7 @@ This repository is intended for:
 **Komal Ghodke**
 
 GitHub: [komalghodke](https://github.com/komalghodke/)  
-LinkedIn: [komalghodke](https://www.linkedin.com/in/komalghodke99/)  
+LinkedIn: [komalghodke](https://www.linkedin.com/in/komalghodke99/)
 
 ⚠️ **Disclaimer:** This repository is for educational purposes only.  
 All content reflects personal understanding, practice, and professional adaptation.
