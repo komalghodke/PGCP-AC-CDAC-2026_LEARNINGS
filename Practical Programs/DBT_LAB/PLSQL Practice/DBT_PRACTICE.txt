@@ -47,3 +47,232 @@ SELECT * FROM student WHERE id IN (SELECT id FROM marks);
 
 //exists subquery
  select * from student s where EXISTS (select 1 from marks m where s.id = m.id);
+
+
+//Window Functions -- ROW_NUMBER()
+SELECT name, ROW_NUMBER() OVER (ORDER BY age DESC) AS row_num FROM student;
+
+SELECT name, city, age, ROW_NUMBER() OVER (PARTITION BY city ORDER BY age DESC) FROM student;
+
+//Window Functions -- rank()
+//give rank of std based on marks
+SELECT name, age, RANK() OVER (ORDER BY age DESC) AS rnk FROM student;
+
+//Window Functions -- Dense rank()
+SELECT name, age, DENSE_RANK() OVER(ORDER BY age DESC) AS drnk FROM student;
+
+SELECT name, city, age, RANK() OVER (PARTITION BY city ORDER BY age DESC) AS rnk FROM student;
+
+//CTE
+ with temp as (select * from student where age<20) select * from temp;
+
+//String Functions -------------
+SELECT UPPER(name) FROM student;
+
+SELECT LOWER(name) FROM student;
+
+SELECT LENGTH(name) FROM student;
+
+SELECT CONCAT(name,' lives in ',city) FROM student;
+
+SELECT LPAD(name,10,'*') FROM student;
+
+SELECT NOW();
+
+SELECT CURDATE();
+
+SELECT CURTIME();
+
+SELECT DATE_FORMAT(NOW(),'%d-%m-%Y');
+
+SELECT IFNULL(NULL,0);
+
+SELECT NULLIF(10,10);
+
+SELECT ABS(-25);
+-----------------------------------------------------------------------------------------------------
+ 
+[PL/SQL]
+ 
+Procedure (Stored Procedure)
+ 
+DELIMITER $
+CREATE PROCEDURE show_students()
+BEGIN
+    SELECT * FROM student;
+END $
+DELIMITER ;
+
+CALL PROCEDURE ---
+call show_students();
+---------------------------------------------------------------
+
+DELIMITER //
+CREATE PROCEDURE get_student(IN sid INT)
+BEGIN
+    SELECT * FROM student WHERE id = sid;
+END //
+DELIMITER ;
+
+call get_student(1);
+
+--------------------------------------------------------------
+	
+DELIMITER //
+CREATE PROCEDURE get_age(IN sid INT, OUT sage INT)
+BEGIN
+    SELECT age INTO sage
+    FROM student
+    WHERE id = sid;
+END //
+DELIMITER ;
+
+SET @age = 0;
+CALL get_age(1, @age);
+SELECT @age;
+
+--------------------------------------------------------------
+DELIMITER //
+CREATE PROCEDURE inc_age(IN sid INT)
+BEGIN
+    UPDATE student
+    SET age = age + 1
+    WHERE id = sid;
+END //
+DELIMITER ;
+----------------------------------------------------------------
+drop PROCEDURE if EXISTS show_students_cursor;
+DELIMITER //
+CREATE PROCEDURE show_students_cursor()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE sname VARCHAR(50);
+
+    DECLARE cur CURSOR FOR SELECT name FROM student;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+    OPEN cur;
+
+    read_loop: LOOP
+        FETCH cur INTO sname;
+        IF done = 1 THEN
+            LEAVE read_loop;
+        END IF;
+        SELECT sname;
+    END LOOP;
+
+    CLOSE cur;
+END //
+DELIMITER ;
+----------------------------------------------------------------------------
+
+CREATE TABLE student_log(log_id INT AUTO_INCREMENT PRIMARY KEY, message VARCHAR(100));
+	
+CREATE TRIGGER trg_after_insert
+AFTER INSERT
+ON student
+FOR EACH ROW
+BEGIN
+    INSERT INTO student_log(message)
+    VALUES(CONCAT('Inserted student: ', NEW.name));
+END //
+DELIMITER ;
+
+mysql>  INSERT INTO student VALUES(20,'Rohit',24,'Mumbai');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> table student;
++----+-------+------+--------+
+| id | name  | age  | city   |
++----+-------+------+--------+
+|  1 | stud1 |   30 | pune   |
+|  2 | stud2 |   30 | pune   |
+|  3 | stud3 |   30 | pune   |
+|  4 | stud4 |   24 | pune   |
+|  5 | stud5 |   29 | pune   |
+|  6 | Rahul |   34 | Pune   |
+|  7 | stud7 |   29 | pune   |
+|  8 | Amit  |   22 | Nagpur |
+|  9 | Sneha |   30 | Nagpur |
+| 10 | ele   |   19 | Delhi  |
+| 11 | tw    |   23 | Mumbai |
+| 12 | thi   |   23 | Mumbai |
+| 13 | Amit  |   21 | Pune   |
+| 14 | Rahul |   22 | Mumbai |
+| 15 | Sneha |   30 | Pune   |
+| 16 | Amit  |   23 | Delhi  |
+| 17 | Rahul |   24 | Pune   |
+| 18 | Sneha |   21 | Mumbai |
+| 19 | Amit  |   23 | Pune   |
+| 20 | Rohit |   24 | Mumbai |
++----+-------+------+--------+
+20 rows in set (0.00 sec)
+
+mysql> SELECT * FROM student_log;
++--------+-------------------------+
+| log_id | message                 |
++--------+-------------------------+
+|      1 | Inserted student: Rohit |
++--------+-------------------------+
+1 row in set (0.00 sec)
+
+----------------------------------------------------------------------------
+
+DELIMITER //
+CREATE TRIGGER trg_before_insert
+BEFORE INSERT
+ON student
+FOR EACH ROW
+BEGIN
+    SET NEW.age = ABS(NEW.age);
+END //
+DELIMITER ;
+-------------------------------------------------------------------------------------
+
+
+drop FUNCTION if EXISTS get_square;
+DELIMITER //
+CREATE FUNCTION get_square(num INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN num * num;
+END //
+DELIMITER ;
+
+select get_square(5);
+
+-------------------------------------------------------------------------------------
+
+DELIMITER //
+CREATE FUNCTION get_age(sid INT)
+RETURNS INT
+DETERMINISTIC
+
+BEGIN
+    DECLARE sage INT;
+    SELECT age INTO sage
+    FROM student
+    WHERE id = sid;
+    RETURN sage;
+END //
+
+DELIMITER ;
+SELECT get_age(1);
+-------------------------------------------------------------------------------------
+DELIMITER //
+
+CREATE FUNCTION check_adult(a INT)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+
+BEGIN
+    IF a >= 18 THEN
+        RETURN 'Adult';
+    ELSE
+        RETURN 'Minor';
+    END IF;
+END //
+
+DELIMITER ;
+
+-------------------------------------------------------------------------------------
