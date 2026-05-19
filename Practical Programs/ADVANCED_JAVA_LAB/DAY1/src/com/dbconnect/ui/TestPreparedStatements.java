@@ -24,7 +24,7 @@ public class TestPreparedStatements {
 				System.out.println("Connection not Established!");
 			}
 
-			// STEP 3 : PreparedStatement
+			// STEP 3 : Prepared Statement
 			PreparedStatement pst = conn.prepareStatement("select * from dummy1");
 
 			// STEP 4 : Execute the Statement
