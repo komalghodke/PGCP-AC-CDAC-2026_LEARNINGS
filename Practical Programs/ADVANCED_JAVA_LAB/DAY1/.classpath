@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/admin/.gradle/caches/modules-2/files-2.1/com.mysql/mysql-connector-j/9.7.0/4e6e3e8765e4a9d0609744b3e8fe75afe1b98cba/mysql-connector-j-9.7.0.jar" sourcepath="C:/Users/admin/.gradle/caches/modules-2/files-2.1/com.mysql/mysql-connector-j/9.7.0/9a250ab1efab4f10c694fc98c9bdffbe0d931e11/mysql-connector-j-9.7.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

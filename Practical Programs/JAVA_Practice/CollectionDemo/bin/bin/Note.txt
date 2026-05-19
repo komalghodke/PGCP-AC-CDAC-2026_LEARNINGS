@@ -1,2 +1,0 @@
-javac -d bin DemoBin.java
-java -classpath bin DemoBin
