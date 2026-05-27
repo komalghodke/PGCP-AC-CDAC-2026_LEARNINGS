@@ -21,5 +21,4 @@ public class Counterservlet extends HttpServlet {
 		//urlrewriting to remeber previous value of count
 		out.println("<a href='getcount?count="+cnt+"'>Click me</a>");
 	}
-
 }

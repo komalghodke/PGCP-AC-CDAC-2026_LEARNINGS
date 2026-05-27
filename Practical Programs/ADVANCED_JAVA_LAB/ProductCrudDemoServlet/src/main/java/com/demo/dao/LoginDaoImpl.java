@@ -23,7 +23,6 @@ public class LoginDaoImpl implements LoginDao {
 			if (rs.next()) {
 				return new MyUser(rs.getString(2), rs.getString(3), rs.getString(4));
 			}
-
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
