@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.demo.model.MyUSer" table="myuser11">
+		<id name="uid">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="string" column="uname" />
+		<property name="mobile" type="string" />
+		<property name="email" type="string" />
+	</class>
+
+</hibernate-mapping>
