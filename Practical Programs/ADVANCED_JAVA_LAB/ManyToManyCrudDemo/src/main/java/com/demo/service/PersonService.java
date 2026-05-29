@@ -8,4 +8,7 @@ public interface PersonService {
 
 	Person displayPerson(int pid);
 
+	boolean updatePerson();
+
+	boolean addNewAddress();
 }

@@ -38,10 +38,17 @@ public class TestManyToManyCrudDemo {
 				}
 			}
 			case 3 -> {
+				boolean status = pservice.updatePerson();
 			}
 			case 4 -> {
 			}
 			case 5 -> {
+				boolean status = pservice.addNewAddress();
+				if (status) {
+					System.out.println("Address added successfully");
+				} else {
+					System.out.println("Address cannot be added");
+				}
 			}
 			case 6 -> {
 			}

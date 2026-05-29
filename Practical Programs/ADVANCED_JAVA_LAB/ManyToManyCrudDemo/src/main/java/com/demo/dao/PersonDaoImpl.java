@@ -4,32 +4,50 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.demo.model.Address;
 import com.demo.model.Person;
 
-public class PersonDaoImpl implements PersonDao{
+public class PersonDaoImpl implements PersonDao {
 	private SessionFactory sf;
 	{
-		sf=HibernateUtil.getMySessionFactory();
+		sf = HibernateUtil.getMySessionFactory();
 	}
+
 	@Override
 	public boolean savePerson(Person p) {
-		Session session=sf.openSession();
-		Transaction tr=session.beginTransaction();
+		Session session = sf.openSession();
+		Transaction tr = session.beginTransaction();
 		session.persist(p);
 		tr.commit();
 		session.close();
 		return true;
-		
-		
+
 	}
+
 	@Override
 	public Person findById(int pid) {
-		Session session=sf.openSession();
-		Transaction tr=session.beginTransaction();
-		Person p=session.find(Person.class,pid);
+		Session session = sf.openSession();
+		Transaction tr = session.beginTransaction();
+		Person p = session.find(Person.class, pid);
 		tr.commit();
 		session.close();
 		return p;
+	}
+
+	@Override
+	public boolean updatePerson() {
+		// modifyPerson
+		return false;
+	}
+
+	@Override
+	public boolean saveAddress(Address a) {
+		Session session = sf.openSession();
+		Transaction tr = session.beginTransaction();
+		session.persist(a);
+		tr.commit();
+		session.close();
+		return true;
 	}
 
 }
