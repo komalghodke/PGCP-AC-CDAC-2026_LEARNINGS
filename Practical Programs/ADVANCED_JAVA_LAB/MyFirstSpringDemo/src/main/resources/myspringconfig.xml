@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+	
+	<!-- calls default constructor of HelloWorld class -->
+	<bean id="hello" class="com.demo.beans.HelloWorld">
+	</bean>
+	
+	<bean id="u1" class="com.demo.beans.MyUser" scope="prototype">
+	      <property name="uid" value="12"></property>
+	       <property name="uname" value="Rohan"></property>
+	        <property name="mob" value="121212"></property>
+	</bean>
+	<!-- create LocalDate Object -->
+	 <bean id="date1"    class="java.time.LocalDate"  factory-method="parse">
+        <constructor-arg value="2026-01-10"/>
+    </bean>
+    
+	<!-- setter injection -->
+	<bean id="p1" class="com.demo.beans.Product" >
+	    <property name="pid" value="1"></property>
+	     <property name="pname" value="Bed"></property>
+	      <property name="qty" value="11"></property>
+	      <property name="price" value="5678"></property>
+	      <property name="mfgDate" ref="date1"></property>      
+	</bean>
+	
+	<!-- constructor injection -->
+	<bean id="p2" class="com.demo.beans.Product" autowire="constructor">
+	<!-- <constructor-arg type="int" value="10"></constructor-arg> -->
+	<constructor-arg index="0" value="10"></constructor-arg>
+	<constructor-arg index="1" value="Shelf"></constructor-arg>
+	<constructor-arg index="2" value="100"></constructor-arg>
+	<constructor-arg index="3" value="2345"></constructor-arg>
+	<!-- <constructor-arg index="4" ref="date1"></constructor-arg> -->
+	</bean>
+	
+	<bean id="addr" class="com.demo.beans.Address">
+	    <property name="aid" value="13"></property>
+	    <property name="street" value="Baner"></property>    
+	    <property name="city" value="Pune"></property>
+	</bean>
+	<bean id="a2" class="com.demo.beans.Address">
+	    <property name="aid" value="13"></property>
+	    <property name="street" value="Baner"></property>    
+	    <property name="city" value="Pune"></property>
+	</bean>
+	
+	<bean id="per1" class="com.demo.beans.Person" autowire="byName">
+	    <property name="pid" value="100"></property>
+	    <property name="pname" value="Deepali"></property>
+	    <!-- <property name="addr" ref="a1"></property> --> <!-- bean wiring -->
+	</bean>
+	
+	
+</beans>
