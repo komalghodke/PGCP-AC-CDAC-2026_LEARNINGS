@@ -1,0 +1,156 @@
+# PRESENT WORKING DIRECTORY
+$ pwd
+/d/CDAC_IET/PGCP-AC Notes IET/SDM-OS
+
+$ whoami
+admin
+
+$ ls
+'case-sac statement.txt'  'linux conditions.txt'  'linux variables.txt'   loops.txt   oprator.txt
+
+# LIST IN HUMAN READABLE FORMAT
+$ ls -lh
+total 17K
+-rw-r--r-- 1 admin 197121  256 Jun  1 11:06 'case-sac statement.txt'
+-rw-r--r-- 1 admin 197121 1.3K Jun  1 11:39 'linux conditions.txt'
+-rw-r--r-- 1 admin 197121 1.5K Jun  1 11:19 'linux variables.txt'
+-rw-r--r-- 1 admin 197121 1.6K Jun  1 11:06  loops.txt
+-rw-r--r-- 1 admin 197121  741 Jun  1 11:28  oprator.txt
+
+$ ls -lrd
+drwxr-xr-x 1 admin 197121 0 Jun  1 11:41 ./
+
+$ ls -lt
+total 17
+-rw-r--r-- 1 admin 197121    0 Jun  1 11:41  BASICS_CMDS.txt
+-rw-r--r-- 1 admin 197121 1236 Jun  1 11:39 'linux conditions.txt'
+-rw-r--r-- 1 admin 197121  741 Jun  1 11:28  oprator.txt
+-rw-r--r-- 1 admin 197121 1442 Jun  1 11:19 'linux variables.txt'
+-rw-r--r-- 1 admin 197121  256 Jun  1 11:06 'case-sac statement.txt'
+-rw-r--r-- 1 admin 197121 1598 Jun  1 11:06  loops.txt
+
+# REVERSED LIST
+$ ls -ltr
+total 17
+-rw-r--r-- 1 admin 197121 1598 Jun  1 11:06  loops.txt
+-rw-r--r-- 1 admin 197121  256 Jun  1 11:06 'case-sac statement.txt'
+-rw-r--r-- 1 admin 197121 1442 Jun  1 11:19 'linux variables.txt'
+-rw-r--r-- 1 admin 197121  741 Jun  1 11:28  oprator.txt
+-rw-r--r-- 1 admin 197121 1236 Jun  1 11:39 'linux conditions.txt'
+-rw-r--r-- 1 admin 197121    0 Jun  1 11:41  BASICS_CMDS.txt
+
+
+$ mkdir DummyFolder
+
+$ ls -ltr
+total 21
+-rw-r--r-- 1 admin 197121 1598 Jun  1 11:06  loops.txt
+-rw-r--r-- 1 admin 197121  256 Jun  1 11:06 'case-sac statement.txt'
+-rw-r--r-- 1 admin 197121 1442 Jun  1 11:19 'linux variables.txt'
+-rw-r--r-- 1 admin 197121  741 Jun  1 11:28  oprator.txt
+-rw-r--r-- 1 admin 197121 1236 Jun  1 11:39 'linux conditions.txt'
+-rw-r--r-- 1 admin 197121 1422 Jun  1 11:45  BASICS_CMDS.txt
+drwxr-xr-x 1 admin 197121    0 Jun  1 11:45  DummyFolder/
+
+
+$ cd DummyFolder
+
+$ cd ..
+
+# REMOVE A EXISTING FILE
+$ rm dummyRemove.txt
+
+# REMOVE A EXISTING DIRECTORY
+$ rmdir "New Folder"
+
+# MOVE A FILE TO SPECIFIC PATH
+$ mv dummytomove.txt "/d/CDAC_IET/PGCP-AC Notes IET/SDM-OS/DummyFolder"
+
+# RENAME A FILE
+$ mv dummyfile.txt 123.txt
+
+$ ls
+ BASICS_CMDS.txt           dummyfile.txt  'linux conditions.txt'   loops.txt
+'case-sac statement.txt'   DummyFolder/   'linux variables.txt'    oprator.txt
+
+# OPEN FILE IN NANO EDITOR TO UPDATE A FILE (IT WILL CREATE A NEW FILE IF IT DOES NOT EXISTS)
+$ nano dummyfile.txt
+
+$ cat dummyfile.txt
+1. MAHI
+2. VK
+3. ROHIT SHARMA
+4. SACHIN TENDULKAR
+5. five
+6. Six
+7. Seven
+8. Eight
+9. Nine
+10. Ten
+11. Kapil Dev
+
+# ALWWAYS RETURNS FIRST 10 RECORDS
+$ head dummyfile.txt
+1. MAHI
+2. VK
+3. ROHIT SHARMA
+4. SACHIN TENDULKAR
+5. five
+6. Six
+7. Seven
+8. Eight
+9. Nine
+10. Ten
+
+# ALWWAYS RETURNS LAST 10 RECORDS
+$ tail dummyfile.txt
+2. VK
+3. ROHIT SHARMA
+4. SACHIN TENDULKAR
+5. five
+6. Six
+7. Seven
+8. Eight
+9. Nine
+10. Ten
+11. Kapil Dev
+
+$ chmod 777 abc.txt
+
+# Executing shell scripted file
+komalg@komalg-virtual-machine:~$  nano 456.sh
+komalg@komalg-virtual-machine:~$ ls -lh
+total 44K
+-rw-rw-r-- 1 komalg komalg   78 Jun  1 12:52 456.sh
+-rw-rw-r-- 1 komalg komalg    0 Jun  1 12:35 abc,txt
+-rwxrwxrwx 1 komalg komalg    0 Jun  1 12:41 abc.txt
+drwxrwxr-x 3 komalg komalg 4.0K Nov 27  2025 CustomerOrdersCleaning
+drwxr-xr-x 2 komalg komalg 4.0K Nov 27  2025 Desktop
+drwxr-xr-x 2 komalg komalg 4.0K Nov 27  2025 Documents
+drwxr-xr-x 2 komalg komalg 4.0K Nov 27  2025 Downloads
+drwxr-xr-x 2 komalg komalg 4.0K Nov 27  2025 Music
+drwxr-xr-x 3 komalg komalg 4.0K Nov 27  2025 Pictures
+drwxr-xr-x 2 komalg komalg 4.0K Nov 27  2025 Public
+drwx------ 4 komalg komalg 4.0K Nov 27  2025 snap
+drwxr-xr-x 2 komalg komalg 4.0K Nov 27  2025 Templates
+drwxr-xr-x 2 komalg komalg 4.0K Nov 27  2025 Videos
+komalg@komalg-virtual-machine:~$ ./456.sh
+bash: ./456.sh: Permission denied
+komalg@komalg-virtual-machine:~$ chmod 777 456.sh
+komalg@komalg-virtual-machine:~$ ./456.sh
+same
+
+$ cat 456.sh
+if [ 'GK' == 'GK' ];
+then
+    echo "same" #output
+else
+    echo "not same"
+fi
+
+
+
+
+
+
+
