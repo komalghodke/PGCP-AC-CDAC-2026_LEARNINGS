@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+	
+	
+	<bean id="placeHolderConfig" 
+	class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	     <property name="location" value="data.properties"></property>
+	</bean>
+	<bean id="u1" class="com.demo.beans.MyUser" scope="prototype">
+	      <property name="uid" value="${user1.uid}"></property>
+	       <property name="uname" value="${user1.uname}"></property>
+	        <property name="mob" value="${user1.mob}"></property>
+	</bean>
+	
+	<bean id="u2" class="com.demo.beans.MyUser" >
+	      <property name="uid" value="${user2.uid}"></property>
+	       <property name="uname" value="${user2.uname}"></property>
+	        <property name="mob" value="${user2.mob}"></property>
+	</bean>
+</beans>

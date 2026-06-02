@@ -23,8 +23,6 @@ public class TestProductData {
 		session.persist(p2);
 		session.persist(p3);
 		session.persist(p4);
-		
-		
 		tr.commit();
 		session.close();
 		sf.close();
