@@ -6,14 +6,13 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
 	xmlns:context="http://www.springframework.org/schema/context">
-
+	
 	<!-- calls default constructor of HelloWorld class -->
-	<bean id="u1" class="com.demo.beans.MyUser" init-method="myinit"
-		destroy-method="mydestroy">
-		<property name="uid" value="11"></property>
-		<property name="uname" value="xxxxxx"></property>
-		<property name="email" value="xx@gmail.com"></property>
-	</bean>
-
-
+   <bean id="u1" class="com.demo.beans.MyUser" init-method="myinit" destroy-method="mydestroy">
+        <property name="uid" value="11"></property>
+        <property name="uname" value="xxxxxx"></property>
+        <property name="email" value="xx@gmail.com"></property>
+   </bean>
+	
+	
 </beans>
