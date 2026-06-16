@@ -1,0 +1,7 @@
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\StdDotNetConsoleApp\bin\Debug\StdDotNetConsoleApp.exe.config
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\StdDotNetConsoleApp\bin\Debug\StdDotNetConsoleApp.exe
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\StdDotNetConsoleApp\bin\Debug\StdDotNetConsoleApp.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\StdDotNetConsoleApp\obj\Debug\StdDotNetConsoleApp.csproj.AssemblyReference.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\StdDotNetConsoleApp\obj\Debug\StdDotNetConsoleApp.csproj.CoreCompileInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\StdDotNetConsoleApp\obj\Debug\StdDotNetConsoleApp.exe
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\StdDotNetConsoleApp\obj\Debug\StdDotNetConsoleApp.pdb

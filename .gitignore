@@ -1,0 +1,5 @@
+# Ignore Visual Studio cache and settings
+.vs/
+*.user
+*.suo
+*.vsidx

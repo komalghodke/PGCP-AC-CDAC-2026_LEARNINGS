@@ -1,0 +1,15 @@
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\bin\Debug\net8.0\Day2.exe
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\bin\Debug\net8.0\Day2.deps.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\bin\Debug\net8.0\Day2.runtimeconfig.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\bin\Debug\net8.0\Day2.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\bin\Debug\net8.0\Day2.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\Day2.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\Day2.AssemblyInfoInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\Day2.AssemblyInfo.cs
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\Day2.csproj.CoreCompileInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\Day2.sourcelink.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\Day2.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\refint\Day2.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\Day2.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\Day2.genruntimeconfig.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\Day2\obj\Debug\net8.0\ref\Day2.dll

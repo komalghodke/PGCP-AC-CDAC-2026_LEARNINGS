@@ -1,0 +1,15 @@
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\bin\Debug\net8.0\ProjectOneConsoleApp.exe
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\bin\Debug\net8.0\ProjectOneConsoleApp.deps.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\bin\Debug\net8.0\ProjectOneConsoleApp.runtimeconfig.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\bin\Debug\net8.0\ProjectOneConsoleApp.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\bin\Debug\net8.0\ProjectOneConsoleApp.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ProjectOneConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ProjectOneConsoleApp.AssemblyInfoInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ProjectOneConsoleApp.AssemblyInfo.cs
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ProjectOneConsoleApp.csproj.CoreCompileInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ProjectOneConsoleApp.sourcelink.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ProjectOneConsoleApp.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\refint\ProjectOneConsoleApp.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ProjectOneConsoleApp.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ProjectOneConsoleApp.genruntimeconfig.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ProjectOneConsoleApp\obj\Debug\net8.0\ref\ProjectOneConsoleApp.dll

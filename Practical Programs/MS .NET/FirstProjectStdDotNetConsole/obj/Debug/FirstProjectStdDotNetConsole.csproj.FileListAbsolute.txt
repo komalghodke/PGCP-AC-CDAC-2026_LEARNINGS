@@ -1,0 +1,7 @@
+C:\Users\admin\source\repos\FirstProjectStdDotNetConsole\bin\Debug\FirstProjectStdDotNetConsole.exe.config
+C:\Users\admin\source\repos\FirstProjectStdDotNetConsole\bin\Debug\FirstProjectStdDotNetConsole.exe
+C:\Users\admin\source\repos\FirstProjectStdDotNetConsole\bin\Debug\FirstProjectStdDotNetConsole.pdb
+C:\Users\admin\source\repos\FirstProjectStdDotNetConsole\obj\Debug\FirstProjectStdDotNetConsole.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\FirstProjectStdDotNetConsole\obj\Debug\FirstProjectStdDotNetConsole.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\FirstProjectStdDotNetConsole\obj\Debug\FirstProjectStdDotNetConsole.exe
+C:\Users\admin\source\repos\FirstProjectStdDotNetConsole\obj\Debug\FirstProjectStdDotNetConsole.pdb
