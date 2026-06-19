@@ -1,0 +1,12 @@
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\bin\Debug\net8.0\ClassLibraryDemo.deps.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\bin\Debug\net8.0\ClassLibraryDemo.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\bin\Debug\net8.0\ClassLibraryDemo.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\ClassLibraryDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\ClassLibraryDemo.AssemblyInfoInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\ClassLibraryDemo.AssemblyInfo.cs
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\ClassLibraryDemo.csproj.CoreCompileInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\ClassLibraryDemo.sourcelink.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\ClassLibraryDemo.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\refint\ClassLibraryDemo.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\ClassLibraryDemo.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\SolutionCSharpDemos\ClassLibraryDemo\obj\Debug\net8.0\ref\ClassLibraryDemo.dll
