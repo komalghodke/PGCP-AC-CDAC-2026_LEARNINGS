@@ -1,0 +1,7 @@
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\02Demo\bin\Debug\02Demo.exe.config
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\02Demo\bin\Debug\02Demo.exe
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\02Demo\bin\Debug\02Demo.pdb
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\02Demo\obj\Debug\02Demo.csproj.AssemblyReference.cache
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\02Demo\obj\Debug\02Demo.csproj.CoreCompileInputs.cache
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\02Demo\obj\Debug\02Demo.exe
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\02Demo\obj\Debug\02Demo.pdb

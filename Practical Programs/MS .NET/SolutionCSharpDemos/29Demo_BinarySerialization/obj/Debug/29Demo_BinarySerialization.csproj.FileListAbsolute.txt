@@ -1,0 +1,7 @@
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\29Demo_BinarySerialization\bin\Debug\29Demo_BinarySerialization.exe.config
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\29Demo_BinarySerialization\bin\Debug\29Demo_BinarySerialization.exe
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\29Demo_BinarySerialization\bin\Debug\29Demo_BinarySerialization.pdb
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\29Demo_BinarySerialization\obj\Debug\29Demo_BinarySerialization.csproj.AssemblyReference.cache
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\29Demo_BinarySerialization\obj\Debug\29Demo_BinarySerialization.csproj.CoreCompileInputs.cache
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\29Demo_BinarySerialization\obj\Debug\29Demo_BinarySerialization.exe
+D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\29Demo_BinarySerialization\obj\Debug\29Demo_BinarySerialization.pdb

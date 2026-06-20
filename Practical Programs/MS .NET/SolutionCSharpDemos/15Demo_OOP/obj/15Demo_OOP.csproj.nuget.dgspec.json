@@ -1,0 +1,144 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\15Demo_OOP\\15Demo_OOP.csproj": {}
+  },
+  "projects": {
+    "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\14Demo_CMathLib\\14Demo_CMathLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\14Demo_CMathLib\\14Demo_CMathLib.csproj",
+        "projectName": "14Demo_CMathLib",
+        "projectPath": "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\14Demo_CMathLib\\14Demo_CMathLib.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\14Demo_CMathLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.315/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\15Demo_OOP\\15Demo_OOP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\15Demo_OOP\\15Demo_OOP.csproj",
+        "projectName": "15Demo_OOP",
+        "projectPath": "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\15Demo_OOP\\15Demo_OOP.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\15Demo_OOP\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\14Demo_CMathLib\\14Demo_CMathLib.csproj": {
+                "projectPath": "D:\\CDAC_IET\\PGCP-AC Notes IET\\MS. NET\\CSharpDemos26\\14Demo_CMathLib\\14Demo_CMathLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.315/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
