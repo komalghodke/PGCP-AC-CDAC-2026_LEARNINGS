@@ -5,9 +5,9 @@
         static void Main(string[] args)
         {
 
-            string filePath = @"D:\2026\DotNet\IET_Feb_26\CSharpDemos26\28Demo_FileIO\Data\data.txt";
+            string filePath = @"D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\28Demo_FileIO\Data\data.txt";
 
-            string filePath2 = @"D:\2026\DotNet\IET_Feb_26\CSharpDemos26\28Demo_FileIO\Data\empdata.txt";
+            string filePath2 = @"D:\CDAC_IET\PGCP-AC Notes IET\MS. NET\CSharpDemos26\28Demo_FileIO\Data\empdata.txt";
 
             #region StreamWriter
             FileStream fs = null;
@@ -79,7 +79,7 @@
             //Console.WriteLine("Done");
 
             #endregion
-        }
+        .}
     }
 
     public class Emp

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EmpMgnt_WindowsForms/1.0.0": {
+        "runtime": {
+          "EmpMgnt_WindowsForms.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmpMgnt_WindowsForms/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
