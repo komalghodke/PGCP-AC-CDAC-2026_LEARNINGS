@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "34Demo_EmpLib/1.0.0": {
+        "dependencies": {
+          "33Demo_MyLib": "1.0.0",
+          "36Demo_MyCustomAttribute": "1.0.0"
+        },
+        "runtime": {
+          "34Demo_EmpLib.dll": {}
+        }
+      },
+      "33Demo_MyLib/1.0.0": {
+        "runtime": {
+          "33Demo_MyLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "36Demo_MyCustomAttribute/1.0.0": {
+        "runtime": {
+          "36Demo_MyCustomAttribute.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "34Demo_EmpLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "33Demo_MyLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "36Demo_MyCustomAttribute/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

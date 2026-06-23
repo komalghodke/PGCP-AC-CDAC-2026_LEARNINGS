@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "35Demo_Relection/1.0.0": {
+        "dependencies": {
+          "33Demo_MyLib": "1.0.0"
+        },
+        "runtime": {
+          "35Demo_Relection.dll": {}
+        }
+      },
+      "33Demo_MyLib/1.0.0": {
+        "runtime": {
+          "33Demo_MyLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "35Demo_Relection/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "33Demo_MyLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

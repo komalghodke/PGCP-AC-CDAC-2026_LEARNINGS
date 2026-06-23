@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>_34Demo_EmpLib</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\32Demo_MyLib\33Demo_MyLib.csproj" />
+    <ProjectReference Include="..\36Demo_MyCustomAttribute\36Demo_MyCustomAttribute.csproj" />
+  </ItemGroup>
+
+</Project>

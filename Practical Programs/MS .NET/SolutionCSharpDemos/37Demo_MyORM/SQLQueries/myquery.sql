@@ -1,0 +1,1 @@
+CREATE TABLE Emp( Address varchar(50),Name varchar(50),Id int)
