@@ -215,22 +215,24 @@
             #endregion
 
             #region Lambda Function, => goes to operator
-            MyDelegate del =  x => x > 10;
+            //MyDelegate del =  x => x > 10;
 
-            if (del(120))
-            {
-                Console.WriteLine($"120 is greater than 10");
-            }
+            //if (del(120))
+            //{
+            //    Console.WriteLine($"120 is greater than 10");
+            //}
             #endregion
 
-            #region MyRegion
+            #region Prediate builtin delegate
 
-            Predicate<int> predicate = x => x > 10;
-            if (predicate(130))
-            {
-                Console.WriteLine($"130 is greater than 10");
-            }
+            //Predicate<int> predicate = x => x > 10;
+            //if (predicate(130))
+            //{
+            //    Console.WriteLine($"130 is greater than 10");
+            //}
             #endregion
+
+
         }
 
         //static void Demo(var y)//not allowed
