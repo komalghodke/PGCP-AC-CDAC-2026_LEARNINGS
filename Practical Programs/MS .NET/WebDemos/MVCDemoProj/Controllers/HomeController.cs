@@ -4,6 +4,7 @@ using MVCDemoProj.Models;
 
 namespace MVCDemoProj.Controllers
 {
+    // Controller
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -13,6 +14,7 @@ namespace MVCDemoProj.Controllers
             _logger = logger;
         }
 
+        // Action Method
         public IActionResult Index()
         {
             return View();
