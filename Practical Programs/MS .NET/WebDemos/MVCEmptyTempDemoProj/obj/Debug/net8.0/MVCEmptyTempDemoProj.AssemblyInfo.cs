@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVCEmptyTempDemoProj")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14a18f9aa87ffe0abd3cb8606fd46beb66bfd2bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0df2e20bc87125510bc26be27e86ca20ae98bed")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVCEmptyTempDemoProj")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVCEmptyTempDemoProj")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
