@@ -1,0 +1,15 @@
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\bin\Debug\net8.0\ReturnTypePractice.exe
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\bin\Debug\net8.0\ReturnTypePractice.deps.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\bin\Debug\net8.0\ReturnTypePractice.runtimeconfig.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\bin\Debug\net8.0\ReturnTypePractice.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\bin\Debug\net8.0\ReturnTypePractice.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ReturnTypePractice.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ReturnTypePractice.AssemblyInfoInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ReturnTypePractice.AssemblyInfo.cs
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ReturnTypePractice.csproj.CoreCompileInputs.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ReturnTypePractice.sourcelink.json
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ReturnTypePractice.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\refint\ReturnTypePractice.dll
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ReturnTypePractice.pdb
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ReturnTypePractice.genruntimeconfig.cache
+D:\CDAC_IET\PGCP-AC-CDAC-2026_LEARNINGS\Practical Programs\MS .NET\WebDemos\ReturnTypePractice\obj\Debug\net8.0\ref\ReturnTypePractice.dll
