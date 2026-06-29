@@ -9,57 +9,57 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StdDotNetConsoleApp", "StdD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2", "Day2\Day2.csproj", "{295029CF-34CA-45A5-B165-8033CF50B475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\04Demo_OOP\04Demo_OOP.csproj", "{4A1F57F5-561B-A38B-13DB-06DCC1BACE74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\04Demo_OOP\04_OOP.csproj", "{4A1F57F5-561B-A38B-13DB-06DCC1BACE74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\07Demo_OOP\07Demo_OOP.csproj", "{10BB2D37-FE44-31FC-9EAD-110E64BCAB6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\07Demo_OOP\07_OOP.csproj", "{10BB2D37-FE44-31FC-9EAD-110E64BCAB6B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Demo", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\02Demo\02Demo.csproj", "{0551F81C-EBC1-4462-8FEF-B564731BCFE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Demo_DataTypes", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\03Demo_DataTypes\03Demo_DataTypes.csproj", "{E42744F8-EA08-47E9-97B0-EA648A2C2BBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_DataTypes", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\03Demo_DataTypes\03_DataTypes.csproj", "{E42744F8-EA08-47E9-97B0-EA648A2C2BBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Demo", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\01Demo\01Demo.csproj", "{13BBBCB8-A334-1262-8D5F-EA7530D6E3C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01DemoProject", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\01Demo\01DemoProject.csproj", "{13BBBCB8-A334-1262-8D5F-EA7530D6E3C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\05Demo_OOP\05Demo_OOP.csproj", "{138DF66B-D631-659B-190F-97270839C6C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\05Demo_OOP\05_OOP.csproj", "{138DF66B-D631-659B-190F-97270839C6C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\06Demo_OOP\06Demo_OOP.csproj", "{918B3440-7DA0-B98E-D476-4FE1F8972F00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\06Demo_OOP\06_OOP.csproj", "{918B3440-7DA0-B98E-D476-4FE1F8972F00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\08Demo_OOP\08Demo_OOP.csproj", "{0DB34FEC-7771-61C7-E7B6-B496E8F3EF41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\08Demo_OOP\08_OOP.csproj", "{0DB34FEC-7771-61C7-E7B6-B496E8F3EF41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\09Demo_OOP\09Demo_OOP.csproj", "{88265DCD-F117-46D4-E589-FC876270F8AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\09Demo_OOP\09_OOP.csproj", "{88265DCD-F117-46D4-E589-FC876270F8AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\10Demo_OOP\10Demo_OOP.csproj", "{DAE7CD77-976E-FE78-0CB0-FBFBD6B12134}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\10Demo_OOP\10_OOP.csproj", "{DAE7CD77-976E-FE78-0CB0-FBFBD6B12134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\11Demo_OOP\11Demo_OOP.csproj", "{119BCE7F-170D-621D-63D7-9B3C0403FBA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\11Demo_OOP\11_OOP.csproj", "{119BCE7F-170D-621D-63D7-9B3C0403FBA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\12Demo_OOP\12Demo_OOP.csproj", "{C7095198-2BD0-DA12-3A31-733E3DE10394}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\12Demo_OOP\12_OOP.csproj", "{C7095198-2BD0-DA12-3A31-733E3DE10394}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\13Demo_OOP\13Demo_OOP.csproj", "{FD73EDCB-0751-63BA-EE26-70C17E5338B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\13Demo_OOP\13_OOP.csproj", "{FD73EDCB-0751-63BA-EE26-70C17E5338B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14Demo_CMathLib", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\14Demo_CMathLib\14Demo_CMathLib.csproj", "{41ABBA08-1DDC-4EBB-E91D-8790FE61C5C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_CMathLib", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\14Demo_CMathLib\14_CMathLib.csproj", "{41ABBA08-1DDC-4EBB-E91D-8790FE61C5C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15Demo_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\15Demo_OOP\15Demo_OOP.csproj", "{2EC50FD2-F5A5-606D-0FBE-DED3AA7859C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_OOP", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\15Demo_OOP\15_OOP.csproj", "{2EC50FD2-F5A5-606D-0FBE-DED3AA7859C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16Demo_Template", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\16Demo_Template\16Demo_Template.csproj", "{B8A59194-0B89-A270-A821-075968171910}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16_Template", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\16Demo_Template\16_Template.csproj", "{B8A59194-0B89-A270-A821-075968171910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17Demo_FormApplication", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\17Demo_FormApplication\17Demo_FormApplication.csproj", "{ED0B7A30-1A00-316C-C654-F0981696BB21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17_FormApplication", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\17Demo_FormApplication\17_FormApplication.csproj", "{ED0B7A30-1A00-316C-C654-F0981696BB21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18Demo_Delegate", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\18Demo_Delegate\18Demo_Delegate.csproj", "{5B605388-C939-4959-EF21-53322EED814D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_Delegate", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\18Demo_Delegate\18_Delegate.csproj", "{5B605388-C939-4959-EF21-53322EED814D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19Demo_Events_Delegate", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\19Demo_Events_Delegate\19Demo_Events_Delegate.csproj", "{21A0E309-93B6-8943-50DB-4B6EB6345D91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19_Events_Delegate", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\19Demo_Events_Delegate\19_Events_Delegate.csproj", "{21A0E309-93B6-8943-50DB-4B6EB6345D91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryDemo", "ClassLibraryDemo\ClassLibraryDemo.csproj", "{9685BDB4-C632-45DF-BC1D-46ABA9C3801F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForLibraryDemo", "ConsoleAppForLibraryDemo\ConsoleAppForLibraryDemo.csproj", "{7BCCC69C-76A5-4ECF-A7E4-F6CA349E3894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20Demo_ObserverDesignPattern", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\20Demo_ObserverDesignPattern\20Demo_ObserverDesignPattern.csproj", "{515D729F-1179-8DAF-E0E9-97BED9F00062}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20_ObserverDesignPattern", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\20Demo_ObserverDesignPattern\20_ObserverDesignPattern.csproj", "{515D729F-1179-8DAF-E0E9-97BED9F00062}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21Demo_MulticastDelegate", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\21Demo_MulticastDelegate\21Demo_MulticastDelegate.csproj", "{527A739C-68BC-6157-EC46-C87253381731}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21_MulticastDelegate", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\21Demo_MulticastDelegate\21_MulticastDelegate.csproj", "{527A739C-68BC-6157-EC46-C87253381731}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22Demo_Collection", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\22Demo_Collection\22Demo_Collection.csproj", "{13298D2B-F1D2-E6ED-7340-149207804D0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22_Collection", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\22Demo_Collection\22_Collection.csproj", "{13298D2B-F1D2-E6ED-7340-149207804D0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23Demo_Generic", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\23Demo_Generic\23Demo_Generic.csproj", "{CC69C0FC-E21E-91F7-862C-784BB451A520}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23_Generic", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\23Demo_Generic\23_Generic.csproj", "{CC69C0FC-E21E-91F7-862C-784BB451A520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24Demo_Generic", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\24Demo_Generic\24Demo_Generic.csproj", "{86F6DEDC-6250-1275-707C-C7333776B934}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24_Generic", "..\..\..\..\PGCP-AC Notes IET\MS. NET\CSharpDemos26\24Demo_Generic\24_Generic.csproj", "{86F6DEDC-6250-1275-707C-C7333776B934}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

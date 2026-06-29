@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37328.6 d17.14
+VisualStudioVersion = 17.14.37328.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCDemoProj", "MVCDemoProj\MVCDemoProj.csproj", "{521BB78E-535A-4E18-B5F9-D0C67CB06F01}"
 EndProject
@@ -15,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCBasicApplicationProj", "MVCBasicApplicationProj\MVCBasicApplicationProj.csproj", "{735BA5B4-6DC6-467F-8E24-F5D6F15D85A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeBasedRoutingDemo", "AttributeBasedRoutingDemo\AttributeBasedRoutingDemo.csproj", "{C7E3A196-E605-49CE-8343-4C81D95F7166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReturnTypesOfActionMethods", "..\..\..\..\PGCP-AC Notes IET\MS. NET\WebDemos26\05Demo_ReturnTypesOfActionMethods\ReturnTypesOfActionMethods.csproj", "{2AFA97E1-BD33-DCA9-F594-0DAE963E8980}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{C7E3A196-E605-49CE-8343-4C81D95F7166}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E3A196-E605-49CE-8343-4C81D95F7166}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7E3A196-E605-49CE-8343-4C81D95F7166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AFA97E1-BD33-DCA9-F594-0DAE963E8980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AFA97E1-BD33-DCA9-F594-0DAE963E8980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AFA97E1-BD33-DCA9-F594-0DAE963E8980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AFA97E1-BD33-DCA9-F594-0DAE963E8980}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
