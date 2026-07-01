@@ -26,9 +26,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_FilterSessionProject", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08Demo_Filters_Session", "..\..\..\..\PGCP-AC Notes IET\MS. NET\WebDemos26\08Demo_Filters_Session\08Demo_Filters_Session.csproj", "{2271B50A-8514-0061-0B8F-9705638E34E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09Demo_CRUD_EF_WebAPI", "..\..\..\..\PGCP-AC Notes IET\MS. NET\WebDemos26\10Demo_CRUD_EF_WebAPI\09Demo_CRUD_EF_WebAPI.csproj", "{8B730C88-7BBF-A28A-EDF0-FA7D2373648F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_CRUD_EF_WebAPI", "..\..\..\..\PGCP-AC Notes IET\MS. NET\WebDemos26\10Demo_CRUD_EF_WebAPI\Demo_CRUD_EF_WebAPI.csproj", "{8B730C88-7BBF-A28A-EDF0-FA7D2373648F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11Demo_DBFirst", "..\..\..\..\PGCP-AC Notes IET\MS. NET\WebDemos26\11Demo_DBFirst\11Demo_DBFirst.csproj", "{F1645DEE-D790-1A57-F5EE-10F5DA998670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeConsoleApp", "PracticeConsoleApp\PracticeConsoleApp.csproj", "{DFD395BC-EE97-4D90-8A93-E683B22B5F6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeMVC", "PracticeMVC\PracticeMVC.csproj", "{E1E9835F-2CDE-42DE-ABD5-0E8B6D2CB241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeMVCBasic", "PracticeMVCBasic\PracticeMVCBasic.csproj", "{BBC9FEA9-3BC9-4606-8588-72CD37310923}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +86,18 @@ Global
 		{F1645DEE-D790-1A57-F5EE-10F5DA998670}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1645DEE-D790-1A57-F5EE-10F5DA998670}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1645DEE-D790-1A57-F5EE-10F5DA998670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD395BC-EE97-4D90-8A93-E683B22B5F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD395BC-EE97-4D90-8A93-E683B22B5F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD395BC-EE97-4D90-8A93-E683B22B5F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD395BC-EE97-4D90-8A93-E683B22B5F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E9835F-2CDE-42DE-ABD5-0E8B6D2CB241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E9835F-2CDE-42DE-ABD5-0E8B6D2CB241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E9835F-2CDE-42DE-ABD5-0E8B6D2CB241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E9835F-2CDE-42DE-ABD5-0E8B6D2CB241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC9FEA9-3BC9-4606-8588-72CD37310923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC9FEA9-3BC9-4606-8588-72CD37310923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC9FEA9-3BC9-4606-8588-72CD37310923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC9FEA9-3BC9-4606-8588-72CD37310923}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
